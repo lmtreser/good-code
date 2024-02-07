@@ -25,6 +25,7 @@ Guías y recursos para aprender y mejorar la práctica de escribir código, orie
     - [Guías de código abierto](https://opensource.guide/es/)
     - [97 cosas que todo programador debería saber](http://97cosas.com/programador/)
     - [References in C++](https://www.geeksforgeeks.org/references-in-cpp/)
+    - [Hacking C++](https://hackingcpp.com/)
     - [C++ Cheat Sheets & Infographics](https://hackingcpp.com/cpp/cheat_sheets.html)
     - [Coding in C for MCUs: Sort Structs to Save Code Size](https://philmulholland.medium.com/coding-in-c-for-mcus-sort-structs-to-save-code-size-7a311e83a5db)
 
