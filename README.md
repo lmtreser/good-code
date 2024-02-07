@@ -3,6 +3,7 @@
 Guías y recursos para aprender y mejorar la práctica de escribir código, orientado principalmente a Arduino.
 
 - `ardutemplate` Arduino Firmware Template
+- `wifi_template` ESP8266/ESP32 WiFi Firmware Template
 
 ## Recursos para seguir aprendiendo
 
@@ -17,6 +18,7 @@ Guías y recursos para aprender y mejorar la práctica de escribir código, orie
     - [The Arduino Language in 10 Points](https://roboticsbackend.com/the-arduino-language-in-10-points/)
     - [Programming Arduino Uno in pure C](https://balau82.wordpress.com/2011/03/29/programming-arduino-uno-in-pure-c/)
     - [Translate an Idea into Arduino Code](https://beckystern.com/2019/05/05/translate-an-idea-into-arduino-code/)
+    - [Arduino documentation goes open-source for community contributions](https://github.com/arduino/docs-content)
 
 - Programación en general
 
