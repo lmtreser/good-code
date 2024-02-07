@@ -19,7 +19,6 @@
 */
 
 #include "pinout.h"
-#include "credentials.h"
 
 // Instancia de objetos
 // .....
