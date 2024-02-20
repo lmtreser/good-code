@@ -7,7 +7,7 @@ Guías y recursos para aprender y mejorar la práctica de escribir código, orie
     - `templates/wifitemplate` ESP8266/ESP32 WiFi Firmware Template
 - Guías de estilo
     - `code_style/SFECodeStyleGuide.md` SparkFun Code Style Guidelines
-    - 
+    - `code_style/arduino-style-guide.md` [Style guide for Arduino](https://github.com/Irikos/arduino-style-guide) por @Irikos 
 
 ## Recursos para seguir aprendiendo
 
@@ -26,12 +26,13 @@ Guías y recursos para aprender y mejorar la práctica de escribir código, orie
 
 - Programación en general
 
-    - [Guías de código abierto](https://opensource.guide/es/)
     - [97 cosas que todo programador debería saber](http://97cosas.com/programador/)
-    - [References in C++](https://www.geeksforgeeks.org/references-in-cpp/)
-    - [Hacking C++](https://hackingcpp.com/)
     - [C++ Cheat Sheets & Infographics](https://hackingcpp.com/cpp/cheat_sheets.html)
     - [Coding in C for MCUs: Sort Structs to Save Code Size](https://philmulholland.medium.com/coding-in-c-for-mcus-sort-structs-to-save-code-size-7a311e83a5db)
+    - [Guías de código abierto](https://opensource.guide/es/)
+    - [Hacking C++](https://hackingcpp.com/)
+    - [KTOWN's Guide to Readable C Code](https://learn.adafruit.com/ktowns-guide-to-readable-c-code)
+    - [References in C++](https://www.geeksforgeeks.org/references-in-cpp/)
 
 - Documentar código
 
