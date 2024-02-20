@@ -6,23 +6,25 @@ Guías y recursos para aprender y mejorar la práctica de escribir código, orie
     - `templates/ardutemplate` Arduino Firmware Template
     - `templates/wifitemplate` ESP8266/ESP32 WiFi Firmware Template
 - Guías de estilo
+    - `code_style/buenas_practicas.ino` Buenas practicas por [Luis Llamas](https://www.luisllamas.es/) 
+    - `code_style/arduino-style-guide.md` [Style guide for Arduino](https://github.com/Irikos/arduino-style-guide) por @Irikos
     - `code_style/SFECodeStyleGuide.md` SparkFun Code Style Guidelines
-    - `code_style/arduino-style-guide.md` [Style guide for Arduino](https://github.com/Irikos/arduino-style-guide) por @Irikos 
 
 ## Recursos para seguir aprendiendo
 
 - Arduino
 
-    - [Arduino Style Guide for Writing Content](https://docs.arduino.cc/learn/contributions/arduino-writing-style-guide)
-    - [Arduino Style Guide for Creating Libraries](https://docs.arduino.cc/learn/contributions/arduino-library-style-guide/)
-    - [Arduino Lint](https://github.com/arduino/arduino-lint)
     - [4 consejos para programar código más limpio en Arduino](https://www.luisllamas.es/4-consejos-para-programar-codigo-mas-limpio-en-arduino/)
-    - [How to Write Clean Arduino Code](https://blog.wokwi.com/how-to-write-clean-arduino-code/)
-    - [Good Arduino Code](https://goodarduinocode.com/)
-    - [The Arduino Language in 10 Points](https://roboticsbackend.com/the-arduino-language-in-10-points/)
-    - [Programming Arduino Uno in pure C](https://balau82.wordpress.com/2011/03/29/programming-arduino-uno-in-pure-c/)
-    - [Translate an Idea into Arduino Code](https://beckystern.com/2019/05/05/translate-an-idea-into-arduino-code/)
     - [Arduino documentation goes open-source for community contributions](https://github.com/arduino/docs-content)
+    - [Arduino Lint](https://github.com/arduino/arduino-lint)
+    - [Arduino programming traps, tips and style guide](http://www.gammon.com.au/forum/?id=12153)
+    - [Arduino Style Guide for Creating Libraries](https://docs.arduino.cc/learn/contributions/arduino-library-style-guide/)
+    - [Arduino Style Guide for Writing Content](https://docs.arduino.cc/learn/contributions/arduino-writing-style-guide)
+    - [Good Arduino Code](https://goodarduinocode.com/)
+    - [How to Write Clean Arduino Code](https://blog.wokwi.com/how-to-write-clean-arduino-code/)
+    - [Programming Arduino Uno in pure C](https://balau82.wordpress.com/2011/03/29/programming-arduino-uno-in-pure-c/)
+    - [The Arduino Language in 10 Points](https://roboticsbackend.com/the-arduino-language-in-10-points/)
+    - [Translate an Idea into Arduino Code](https://beckystern.com/2019/05/05/translate-an-idea-into-arduino-code/)
 
 - Programación en general
 
@@ -36,16 +38,16 @@ Guías y recursos para aprender y mejorar la práctica de escribir código, orie
 
 - Documentar código
 
-    - [Doxygen](https://www.doxygen.nl/)
-    - [The Markdown Guide](https://www.markdownguide.org/)
-    - [MkDocs](https://www.mkdocs.org/)
     - [AsciiDoc](https://asciidoc.org/)
+    - [Doxygen](https://www.doxygen.nl/)
+    - [MkDocs](https://www.mkdocs.org/)
+    - [The Markdown Guide](https://www.markdownguide.org/)
 
 - Control de versiones
 
-    - [Oh My Git](https://ohmygit.blinry.org/)
-    - [Git y GitHub tutorial paso a paso](https://programarfacil.com/blog/arduino-blog/git-y-github/)
     - [Git Cheatsheet](http://ndpsoftware.com/git-cheatsheet.html)
+    - [Git y GitHub tutorial paso a paso](https://programarfacil.com/blog/arduino-blog/git-y-github/)
+    - [Oh My Git](https://ohmygit.blinry.org/)
 
 ## Licencia
 
