@@ -2,8 +2,12 @@
 
 Guías y recursos para aprender y mejorar la práctica de escribir código, orientado principalmente a Arduino.
 
-- `ardutemplate` Arduino Firmware Template
-- `wifi_template` ESP8266/ESP32 WiFi Firmware Template
+- Plantillas
+    - `ardu_template` Arduino Firmware Template
+    - `wifi_template` ESP8266/ESP32 WiFi Firmware Template
+- Guías de estilo
+    - `code_style/SFECodeStyleGuide.md` SparkFun Code Style Guidelines
+    - 
 
 ## Recursos para seguir aprendiendo
 
