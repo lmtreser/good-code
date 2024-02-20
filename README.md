@@ -3,11 +3,11 @@
 Guías y recursos para aprender y mejorar la práctica de escribir código, orientado principalmente a Arduino.
 
 - Plantillas
-    - `templates/ardutemplate` Arduino Firmware Template
-    - `templates/wifitemplate` ESP8266/ESP32 WiFi Firmware Template
+    - `templates/arduTemplate` Arduino Firmware Template
+    - `templates/wifiTemplate` ESP8266/ESP32 WiFi Firmware Template
 - Guías de estilo
     - `code_style/buenas_practicas.ino` Buenas practicas por [Luis Llamas](https://www.luisllamas.es/) 
-    - `code_style/arduino-style-guide.md` [Style guide for Arduino](https://github.com/Irikos/arduino-style-guide) por @Irikos
+    - `code_style/arduino-style-guide.md` Style guide for Arduino por [@Irikos](https://github.com/Irikos/arduino-style-guide)
     - `code_style/SFECodeStyleGuide.md` SparkFun Code Style Guidelines
 
 ## Recursos para seguir aprendiendo
@@ -30,6 +30,7 @@ Guías y recursos para aprender y mejorar la práctica de escribir código, orie
 
     - [97 cosas que todo programador debería saber](http://97cosas.com/programador/)
     - [C++ Cheat Sheets & Infographics](https://hackingcpp.com/cpp/cheat_sheets.html)
+    - [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html)
     - [Coding in C for MCUs: Sort Structs to Save Code Size](https://philmulholland.medium.com/coding-in-c-for-mcus-sort-structs-to-save-code-size-7a311e83a5db)
     - [Guías de código abierto](https://opensource.guide/es/)
     - [Hacking C++](https://hackingcpp.com/)
