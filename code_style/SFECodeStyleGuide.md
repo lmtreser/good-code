@@ -14,10 +14,10 @@ In Visual Studio Code, clang-format is integrated in the standard **C/C++** exte
 
 Example of this setting:
 
-![Visual Studio Code setting](images/VSC_Settings.png)
+![Visual Studio Code setting](VSC_Settings.png)
 
 ### Setting the Style in **Sublime Text**
-Clang-format is available as a package via Package Control - specifically the ![Clang Format package](https://packagecontrol.io/packages/Clang%20Format). 
+Clang-format is available as a package via Package Control - specifically the [Clang Format package](https://packagecontrol.io/packages/Clang%20Format). 
 
 Normally the style used by the clang-format package is set using the command pallet, but the Microsoft option is fairly new and not available via this method. To set the style to **Microsoft**, the value is set in the the package settings file.  
 

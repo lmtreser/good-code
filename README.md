@@ -21,15 +21,19 @@ Guías y recursos para aprender y mejorar la práctica de escribir código, orie
     - [Arduino Style Guide for Creating Libraries](https://docs.arduino.cc/learn/contributions/arduino-library-style-guide/)
     - [Arduino Style Guide for Writing Content](https://docs.arduino.cc/learn/contributions/arduino-writing-style-guide)
     - [Good Arduino Code](https://goodarduinocode.com/)
+    - [How to Write A Great Arduino Library](https://www.sparkfun.com/news/3245)
     - [How to Write Clean Arduino Code](https://blog.wokwi.com/how-to-write-clean-arduino-code/)
     - [Programming Arduino Uno in pure C](https://balau82.wordpress.com/2011/03/29/programming-arduino-uno-in-pure-c/)
     - [The Arduino Language in 10 Points](https://roboticsbackend.com/the-arduino-language-in-10-points/)
     - [Translate an Idea into Arduino Code](https://beckystern.com/2019/05/05/translate-an-idea-into-arduino-code/)
+    - [Writing a Library for Arduino](https://docs.arduino.cc/learn/contributions/arduino-creating-library-guide/)
 
 - Programación en general
 
     - [97 cosas que todo programador debería saber](http://97cosas.com/programador/)
+    - [C Coding Standard](https://users.ece.cmu.edu/~eno/coding/CCodingStandard.html)
     - [C++ Cheat Sheets & Infographics](https://hackingcpp.com/cpp/cheat_sheets.html)
+    - [C++ Coding Standard](https://users.ece.cmu.edu/~eno/coding/CppCodingStandard.html)
     - [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html)
     - [Coding in C for MCUs: Sort Structs to Save Code Size](https://philmulholland.medium.com/coding-in-c-for-mcus-sort-structs-to-save-code-size-7a311e83a5db)
     - [Guías de código abierto](https://opensource.guide/es/)
