@@ -2,6 +2,8 @@
 
 Guías y recursos para aprender y mejorar la práctica de escribir código, orientado principalmente a Arduino.
 
+- Git
+    - `git` Recursos sobre control de versiones
 - Plantillas
     - `templates/arduTemplate` Arduino Firmware Template
     - `templates/wifiTemplate` ESP8266/ESP32 WiFi Firmware Template
