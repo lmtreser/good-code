@@ -52,8 +52,11 @@ Guías y recursos para aprender y mejorar la práctica de escribir código, orie
 
 - Control de versiones
 
+    - [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
     - [Git Cheatsheet](http://ndpsoftware.com/git-cheatsheet.html)
     - [Git y GitHub tutorial paso a paso](https://programarfacil.com/blog/arduino-blog/git-y-github/)
+    - [gitignore](https://github.com/github/gitignore)
+    - [Gitignore Explicado: ¿Qué es Gitignore, y cómo agregarlo a tu repositorio?](https://www.freecodecamp.org/espanol/news/gitignore-explicado-que-es-y-como-agregar-a-tu-repositorio/)
     - [Oh My Git](https://ohmygit.blinry.org/)
 
 ## Licencia
