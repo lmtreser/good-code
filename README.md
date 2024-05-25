@@ -4,7 +4,9 @@ Guías y recursos para aprender y mejorar la práctica de escribir código, orie
 
 - Git
     - `git` Recursos sobre control de versiones
+    - `git/gitignore` A collection of useful *.gitignore* templates
 - Plantillas
+    - `templates/platformio-examples-develop` PlatformIO Project Examples
     - `templates/arduTemplate` Arduino Firmware Template
     - `templates/wifiTemplate` ESP8266/ESP32 WiFi Firmware Template
 - Guías de estilo
@@ -41,6 +43,7 @@ Guías y recursos para aprender y mejorar la práctica de escribir código, orie
     - [Guías de código abierto](https://opensource.guide/es/)
     - [Hacking C++](https://hackingcpp.com/)
     - [KTOWN's Guide to Readable C Code](https://learn.adafruit.com/ktowns-guide-to-readable-c-code)
+    - [PlatformIO Project Examples](https://github.com/platformio/platformio-examples)
     - [References in C++](https://www.geeksforgeeks.org/references-in-cpp/)
 
 - Documentar código
