@@ -6,8 +6,9 @@ Guías y recursos para aprender y mejorar la práctica de escribir código, orie
     - `git` Recursos sobre control de versiones
     - `git/gitignore` A collection of useful *.gitignore* templates
 - Plantillas
-    - `templates/platformio-examples-develop` PlatformIO Project Examples
+    - `templates/ArduinoLibraryExample`Arduino Library Example
     - `templates/arduTemplate` Arduino Firmware Template
+    - `templates/platformio-examples-develop` PlatformIO Project Examples
     - `templates/wifiTemplate` ESP8266/ESP32 WiFi Firmware Template
 - Guías de estilo
     - `code_style/buenas_practicas.ino` Buenas practicas por [Luis Llamas](https://www.luisllamas.es/) 
