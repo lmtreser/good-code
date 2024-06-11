@@ -15,6 +15,26 @@ Guías y recursos para aprender y mejorar la práctica de escribir código, orie
     - `code_style/arduino-style-guide.md` Style guide for Arduino por [@Irikos](https://github.com/Irikos/arduino-style-guide)
     - `code_style/SFECodeStyleGuide.md` SparkFun Code Style Guidelines
 
+---
+
+¿Alguna vez te has topado con un código misterioso? ¡A todos nos ha pasado! 💪🏽
+
+Desconcertado por nombres de variables crípticos, funciones interminables y comentarios confusos. Escribir código limpio es esencial para evitar estos escenarios y garantizar un proceso de desarrollo sin problemas. Hace que su código se explique por sí mismo, sea fácil de navegar y se pueda mantener, lo que le ahorra futuros dolores de cabeza.
+
+La adopción de principios de código limpio mejora la legibilidad del código, facilita la depuración, reduce el costo de mantenimiento del programa, mejora la colaboración, mejora la calidad del código y te convierte en un mejor programador.
+
+1. **Utilizar nombres descriptivos**. Los nombres claros y descriptivos hacen que el código sea más fácil de entender. Ya sea una variable, función o clase, su nombre debe reflejar su propósito.
+
+2. **Seguir el principio DRY**. DRY (del inglés "Don't Repeat Yourself") significa "No te repitas". Si escribe el mismo código en varios lugares, deberá crear una función que pueda llamarse siempre que sea necesaria esa tarea.
+
+3. **Mantener las funciones pequeñas**. Cada función debe hacer una cosa y hacerlo bien. Si las funciones son demasiado grandes y hacen demasiadas cosas, probablemente sea hora de dividirlas.
+
+4. **Escribir comentarios, pero sabiamente**. Los comentarios son útiles pero no son una alternativa para el código limpio. Deberían explicar por qué se hace algo, no qué se hace. Recuerde, un buen código se documenta principalmente por sí mismo.
+
+5. **Refactorizar periódicamente el código**. No tengas miedo de revisar el código y mejorarlo. A medida que adquiera más conocimientos y experiencia, encontrará mejores formas de hacer las cosas. La refactorización es parte del proceso de codificación.
+
+Recordar: escribir código limpio requiere práctica, pero los beneficios valen la pena.
+
 ## Recursos para seguir aprendiendo
 
 - Arduino
