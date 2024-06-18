@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <html data-lt-installed=true class="tmuihdudd idc0_350"><!--
+ Page saved with SingleFile 
+ url: http://mundogeek.net/traducciones/modismos-python.htm 
+ saved date: Tue Jun 18 2024 10:34:06 GMT-0300 (hora estándar de Argentina)
+--><meta charset=utf-8>
+<style media="screen, projection">body{background-color:#777777;font-family:Arial,Helvetica,Sans-serif;font-size:12px;margin:0px}#titulo{background-color:#7B92B5;color:#ffffff}#menu{width:120px;float:left;text-align:right}#menu ul{display:inline;list-style-type:none;margin:0px;margin-left:5px;margin-right:5px;line-height:1.8em;font-size:13px;font-weight:bold;color:#ffffff}#menu a{color:#ffffff;text-decoration:none}#menu a:hover{text-decoration:underline}#contenido{width:720px;margin-left:auto;margin-right:auto;background-color:white;border-left:2px solid #7B92B5;border-right:2px solid #7B92B5}#contenido h1{font-size:24px;text-align:center}#texto{padding:0em 1em 0em 1em}#texto a:link,#texto a:visited{color:#7B92B5}#pie{clear:both;background-color:#6E87AA;color:#ffffff;font-size:10px;padding-top:15px;padding-left:5px;padding-bottom:15px}#pie a:link,#pie a:visited,#titulo a:link,#titulo a:visited{color:white;text-decoration:underline}.centrado{text-align:center;font-weight:bold}</style>
+<title>Modismos y Anti-Modismos en Python</title>
+<meta name=referrer content=no-referrer><link type=image/x-icon rel="shortcut icon" href=data:image/vnd.microsoft.icon;base64,><link rel=canonical href=http://mundogeek.net/traducciones/modismos-python.htm><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:; frame-src 'self' data:;"><style>img[src="data:,"],source[src="data:,"]{display:none!important}</style></head>
+<body>
+<div id=menu>
+ <ul>
+ <li><a href=http://mundogeek.net/>Bitácora</a></li>
+ <li><a href=http://mundogeek.net/traducidos/>Traducciones</a></li>
+ <li><a href=http://mundogeek.net/tutorial-python/ title="Tutorial de Python">Tutorial de Python</a></li>
+ </ul>
+</div>
+<div id=contenido>
+<div id=titulo>
+<h1>Modismos y Anti-Modismos en Python</h1>
+<p class=centrado><b>Por Moshe Zadka</b></p>
+<p class=centrado>Traducción al castellano de "Idioms and Anti-Idioms in Python"<br>
+por <a href=http://mundogeek.net/>Raúl González Duque</a> el día 9 de Abril de 2008
+</p>
+</div>
+<div id=texto>
+<strong>Resumen</strong>
+<p>Este documento puede considerarse un compañero del tutorial de Python. Muestra cómo utilizar Python, y, casi incluso más importante, cómo no usar Python.</p>
+<h2>Construcciones del lenguaje que no deberías usar</h2>
+<p>Aunque Python tiene relativamente pocas trampas o gotchas comparado con otros lenguajes, sigue teniendo algunas construcciones que sólo son de utilidad en situaciones muy específicas, o que son sencillamente peligrosas.</p>
+<h3>from modulo import *</h3>
+<h4>En definiciones de funciones</h4>
+<p><code>from modulo import *</code> no es válido dentro de definiciones de funciones. Aunque muchas versiones de Python no comprueban esta condición, no deja de ser inválido, de la misma forma que tener un buen abogado no le transforma a uno en inocente. Nunca lo utilices de esta forma. Incluso en las versiones en las que se aceptaba, producía que la función se ejecutara mucho más lentamente, porque el compilador no podía estar seguro de qué nombres eran locales y cuáles globales. En Python 2.1 el uso de esta construcción produce warnings y algunas veces también errores.</p>
+<h4>A nivel de módulo</h4>
+<p>Aunque <code>from modulo import *</code> es perfectamente válido a nivel de módulo, normalmente su uso sigue siendo una mala idea. En primer lugar porque al utilizarlo perdemos una importante propiedad de Python - y es que puedes saber dónde se define cada nombre de primer nivel simplemente usando la función de búsqueda de tu editor. Además te arriesgas a encontrarte con errores en el futuro, si alguno de los módulos incorpora nuevas funciones o clases.</p>
+<p>Una de las preguntas más horribles con las que te puedes encontrar en los grupos de noticias es por qué el siguiente código no funciona:</p>
+<div class=dp-highlighter><div class=bar><div class=tools><a href=#>view plain</a><a href=#>copy to clipboard</a><a href=#>print</a><a href=#>?</a></div></div><ol start=1 class=dp-py><li class=alt><span><span>f&nbsp;=&nbsp;open(</span><span class=string>"www"</span><span>)&nbsp;&nbsp;</span></span><li><span>f.read()&nbsp;&nbsp;</span></ol></div><pre name=code class=python style=display:none>f = open("www")
+f.read()
+</pre>
+<p>Por supuesto, funciona perfectamente (asumiendo que tienes un archivo llamado "www"). Pero no funciona si tenemos un <code>from os import *</code> en algún lugar del módulo. El módulo <code>os</code> tiene una función llamada <code>open()</code> que devuelve un entero. Aunque algunas veces pueda resultar de utilidad, sobre escribir las funciones por defecto es uno de los efectos colaterales más molestos.</p>
+<p>Recuerda, nunca estás seguro de los nombres que exporta un módulo, así que importa sólo lo que necesites -- <code>from modulo import nombre1, nombre2</code>, o manten cada cosa en su módulo y accede a ellos cuando lo necesites — <code>import modulo;print modulo.nombre</code>.</p>
+<h4>Cuándo es adecuado</h4>
+<p>Hay situaciones en las que el uso de <code>from modulo import *</code> es adecuado:</p>
+<ul><li>En el intérprete interactivo. Por ejemplo el escribir <code>from math import *</code> transforma a Python en una calculadora científica increíble.</li>
+<li>Al extender un módulo en C con un módulo en Python.</li>
+<li>Cuando el módulo especifica que es seguro usar <code>from import *</code>.</li>
+</ul> 
+<h3>exec, execfile() y amigos, sin adornos</h3>
+<p>El término "sin adornos" se refiere al uso sin indicar un diccionario explicitamente, en cuyo caso estas costrucciones evaluan el código en el entorno <em>actual</em>. Esto es peligroso por las mismas razones por las que lo es <code>from import *</code> -- puede modificar variables que estés utilizando y estropear el resto del código. Simplemente evita usarlo.</p>
+<p>Mal:</p>
+<pre>&gt;&gt;&gt; for name in sys.argv[1:]:
+&gt;&gt;&gt;     exec "%s=1" % name
+&gt;&gt;&gt; def func(s, **kw):
+&gt;&gt;&gt;     for var, val in kw.items():
+&gt;&gt;&gt;         exec "s.%s=val" % var  # invalido!
+&gt;&gt;&gt; execfile("handler.py")
+&gt;&gt;&gt; handle()</pre>
+<p>Bien:</p>
+<pre>&gt;&gt;&gt; d = {}
+&gt;&gt;&gt; for name in sys.argv[1:]:
+&gt;&gt;&gt;     d[name] = 1
+&gt;&gt;&gt; def func(s, **kw):
+&gt;&gt;&gt;     for var, val in kw.items():
+&gt;&gt;&gt;         setattr(s, var, val)
+&gt;&gt;&gt; d={}
+&gt;&gt;&gt; execfile("handle.py", d, d)
+&gt;&gt;&gt; handle = d['handle']
+&gt;&gt;&gt; handle()</pre>
+<h3>from modulo import nombre1, nombre2</h3>
+<p>Esta es una advertencia más ligera que las anteriores pero aun así es algo que no deberías usar a menos que tengas buenas razones para hacerlo. La razón por la que se trata de una mala idea es porque de repente tienes un objeto que vive en dos espacios de nombres distintos. Cuando el ligado de un espacio de nombres cambia, el otro no lo hará, por lo que habrá una discrepancia entre ambos. Esto ocurre, por ejemplo, cuando se recarga un módulo, o cuando se cambia la definición de una función en tiempo de ejecución.</p>
+Mal:
+<div class=dp-highlighter><div class=bar><div class=tools><a href=#>view plain</a><a href=#>copy to clipboard</a><a href=#>print</a><a href=#>?</a></div></div><ol start=1 class=dp-py><li class=alt><span><span class=comment>#&nbsp;foo.py</span><span>&nbsp;&nbsp;</span></span><li><span>a&nbsp;=&nbsp;<span class=number>1</span><span>&nbsp;&nbsp;</span></span><li class=alt><span>&nbsp;&nbsp;</span><li><span><span class=comment>#&nbsp;bar.py</span><span>&nbsp;&nbsp;</span></span><li class=alt><span><span class=keyword>from</span><span>&nbsp;foo&nbsp;</span><span class=keyword>import</span><span>&nbsp;a&nbsp;&nbsp;</span></span><li><span><span class=keyword>if</span><span>&nbsp;algo():&nbsp;&nbsp;</span></span><li class=alt><span>&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;=&nbsp;<span class=number>2</span><span>&nbsp;</span><span class=comment>#&nbsp;cuidado:&nbsp;foo.a&nbsp;!=&nbsp;a</span><span>&nbsp;&nbsp;</span></span></ol></div><pre name=code class=python style=display:none># foo.py
+a = 1
+
+# bar.py
+from foo import a
+if algo():
+    a = 2 # cuidado: foo.a != a</pre>
+Bien:
+<div class=dp-highlighter><div class=bar><div class=tools><a href=#>view plain</a><a href=#>copy to clipboard</a><a href=#>print</a><a href=#>?</a></div></div><ol start=1 class=dp-py><li class=alt><span><span class=comment>#&nbsp;foo.py</span><span>&nbsp;&nbsp;</span></span><li><span>a&nbsp;=&nbsp;<span class=number>1</span><span>&nbsp;&nbsp;</span></span><li class=alt><span>&nbsp;&nbsp;</span><li><span><span class=comment>#&nbsp;bar.py</span><span>&nbsp;&nbsp;</span></span><li class=alt><span><span class=keyword>import</span><span>&nbsp;foo&nbsp;&nbsp;</span></span><li><span><span class=keyword>if</span><span>&nbsp;algo():&nbsp;&nbsp;</span></span><li class=alt><span>&nbsp;&nbsp;&nbsp;&nbsp;foo.a&nbsp;=&nbsp;<span class=number>2</span><span>&nbsp;&nbsp;</span></span></ol></div><pre name=code class=python style=display:none># foo.py
+a = 1
+
+# bar.py
+import foo
+if algo():
+    foo.a = 2</pre>
+<h3>except:</h3>
+<p>Python cuenta con una cláusula <code>except:</code> que sirve para capturar todas las excepciones. Como <em>todos</em> los errores en Python producen excepciones, esto provoca que muchos errores de programación parezcan errores en tiempo de ejecución, y dificulta el trabajo de depuración.</p>
+<p>En el siguiente código podemos ver un buen ejemplo:</p>
+<div class=dp-highlighter><div class=bar><div class=tools><a href=#>view plain</a><a href=#>copy to clipboard</a><a href=#>print</a><a href=#>?</a></div></div><ol start=1 class=dp-py><li class=alt><span><span class=keyword>try</span><span>:&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;foo&nbsp;=&nbsp;opne(<span class=string>"archivo"</span><span>)&nbsp;</span><span class=comment>#&nbsp;"open"&nbsp;esta&nbsp;mal&nbsp;escrito</span><span>&nbsp;&nbsp;</span></span><li class=alt><span><span class=keyword>except</span><span>:&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;sys.exit(<span class=string>"no&nbsp;se&nbsp;pudo&nbsp;abrir&nbsp;el&nbsp;archivo"</span><span>)&nbsp;&nbsp;</span></span></ol></div><pre name=code class=python style=display:none>try:
+    foo = opne("archivo") # "open" esta mal escrito
+except:
+    sys.exit("no se pudo abrir el archivo")</pre>
+<p>La segunda línea lanza una excepción de tipo <code>NameError</code> el cual se captura por la clausula except. El programa terminará, y no tendrás ni idea de que esto no tiene nada que ver con que se pueda o no leer "archivo".</p>
+<p>El siguiente ejemplo está mejor escrito</p>
+<div class=dp-highlighter><div class=bar><div class=tools><a href=#>view plain</a><a href=#>copy to clipboard</a><a href=#>print</a><a href=#>?</a></div></div><ol start=1 class=dp-py><li class=alt><span><span class=keyword>try</span><span>:&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;foo&nbsp;=&nbsp;opne(<span class=string>"archivo"</span><span>)&nbsp;</span><span class=comment>#&nbsp;lo&nbsp;cambiaremos&nbsp;a&nbsp;"open"&nbsp;en&nbsp;cuanto&nbsp;ejecutemos</span><span>&nbsp;&nbsp;</span></span><li class=alt><span><span class=keyword>except</span><span>&nbsp;IOError:&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;sys.exit(<span class=string>"no&nbsp;se&nbsp;pudo&nbsp;abrir&nbsp;el&nbsp;archivo"</span><span>)&nbsp;&nbsp;</span></span></ol></div><pre name=code class=python style=display:none>try:
+    foo = opne("archivo") # lo cambiaremos a "open" en cuanto ejecutemos
+except IOError:
+    sys.exit("no se pudo abrir el archivo")</pre>
+<p>Hay algunas situaciones en las que el uso de la clausula <code>except:</code> es adecuado, como en el caso de un framework al ejecutar retrollamadas, no queremos que ninguna retrollamada moleste al framework.</p>
+<h2>Excepciones</h2>
+<p>Las excepciones son una característica muy útil de Python. Deberías aprender a lanzarlas cuando ocurra algo inesperado, y capturarlas sólo en los lugares en los que puedas hacer algo por remediarlas.</p>
+<p>El siguiente es un anti-modismo muy popular:</p>
+<div class=dp-highlighter><div class=bar><div class=tools><a href=#>view plain</a><a href=#>copy to clipboard</a><a href=#>print</a><a href=#>?</a></div></div><ol start=1 class=dp-py><li class=alt><span><span class=keyword>def</span><span>&nbsp;get_status(archivo):&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class=keyword>if</span><span>&nbsp;</span><span class=keyword>not</span><span>&nbsp;os.path.exists(archivo):&nbsp;&nbsp;</span></span><li class=alt><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=keyword>print</span><span>&nbsp;</span><span class=string>"no&nbsp;se&nbsp;encontro&nbsp;el&nbsp;archivo"</span><span>&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sys.exit(<span class=number>1</span><span>)&nbsp;&nbsp;</span></span><li class=alt><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class=keyword>return</span><span>&nbsp;open(archivo).readline()&nbsp;&nbsp;</span></span></ol></div><pre name=code class=python style=display:none>def get_status(archivo):
+    if not os.path.exists(archivo):
+        print "no se encontro el archivo"
+        sys.exit(1)
+    return open(archivo).readline()</pre>
+<p>Supongamos que el archivo se borra justo entre la ejecución de <code>os.path.exists()</code> y la llamada a <code>open()</code>. Esto haría que la última línea lanzara una excepción de tipo <code>IOError</code>. Lo mismo ocurriría si el archivo existiera pero sólo tuviera permisos de lectura. Como al probar la ejecución del programa no se aprecia ningún error, el resultado de la prueba será satisfactorio, y se mandará el código a producción. Entonces el usuario se encuentra con un <code>IOError</code> que no se ha capturado y tiene que lidiar con mensajes extraños de trazado de pila.</p>
+<p>Aquí tenemos una forma mejor de hacerlo.</p>
+<div class=dp-highlighter><div class=bar><div class=tools><a href=#>view plain</a><a href=#>copy to clipboard</a><a href=#>print</a><a href=#>?</a></div></div><ol start=1 class=dp-py><li class=alt><span><span class=keyword>def</span><span>&nbsp;get_status(file):&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class=keyword>try</span><span>:&nbsp;&nbsp;</span></span><li class=alt><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=keyword>return</span><span>&nbsp;open(file).readline()&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class=keyword>except</span><span>&nbsp;(IOError,&nbsp;OSError):&nbsp;&nbsp;</span></span><li class=alt><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=keyword>print</span><span>&nbsp;</span><span class=string>"no&nbsp;se&nbsp;encontro&nbsp;el&nbsp;archivo"</span><span>&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sys.exit(<span class=number>1</span><span>)&nbsp;&nbsp;</span></span></ol></div><pre name=code class=python style=display:none>def get_status(file):
+    try:
+        return open(file).readline()
+    except (IOError, OSError):
+        print "no se encontro el archivo"
+        sys.exit(1)</pre>
+<p>En esta versión hay dos posibilidades, o bien el archivo se abre y se lee la línea (por lo que funciona incluso en conexiones NFS o SMB poco fiables), o se muestra el mensaje y se aborta la ejecución.</p>
+<p>Aun así, <code>get_status()</code> asume demasiadas cosas -- que sólo se utilizará en un script que no se ejecutará por mucho tiempo y no, por ejemplo, en un programa que corra durante días en un servidor. Por supuesto al llamar a la función se podría hacer algo como</p>
+<div class=dp-highlighter><div class=bar><div class=tools><a href=#>view plain</a><a href=#>copy to clipboard</a><a href=#>print</a><a href=#>?</a></div></div><ol start=1 class=dp-py><li class=alt><span><span class=keyword>try</span><span>:&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;status&nbsp;=&nbsp;get_status(log)&nbsp;&nbsp;</span><li class=alt><span><span class=keyword>except</span><span>&nbsp;SystemExit:&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;status&nbsp;=&nbsp;<span class=special>None</span><span>&nbsp;&nbsp;</span></span></ol></div><pre name=code class=python style=display:none>try:
+    status = get_status(log)
+except SystemExit:
+    status = None</pre>
+<p>asi que intenta usar cuantas menos clausulas <code>except</code> mejor en tu código -- normalmente estas consistirán en un <code>except</code> que capture todo en <code>main()</code>, o en llamadas internas que siempre deberían ejecutarse con éxito.</p>
+<p>Por lo tanto la mejor versión sería probablemente</p>
+<div class=dp-highlighter><div class=bar><div class=tools><a href=#>view plain</a><a href=#>copy to clipboard</a><a href=#>print</a><a href=#>?</a></div></div><ol start=1 class=dp-py><li class=alt><span><span class=keyword>def</span><span>&nbsp;get_status(file):&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class=keyword>return</span><span>&nbsp;open(file).readline()&nbsp;&nbsp;</span></span></ol></div><pre name=code class=python style=display:none>def get_status(file):
+    return open(file).readline()</pre>
+<p>El código que llama a la función puede lidiar con la excecpión si lo necesita (por ejemplo, si prueba la función con varios archivos en un bucle), o simplemente dejar que la excepción se propague.</p>
+<p>La última versión tampoco es muy buena -- debido a detalles de implementación, el archivo no se cerrará cuando se lance una excepción hasta que el manejador termine, y puede que no ocurra en alguna implementación que no se base en C (como por ejemplo Jython)</p>
+<div class=dp-highlighter><div class=bar><div class=tools><a href=#>view plain</a><a href=#>copy to clipboard</a><a href=#>print</a><a href=#>?</a></div></div><ol start=1 class=dp-py><li class=alt><span><span class=keyword>def</span><span>&nbsp;get_status(file):&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;fp&nbsp;=&nbsp;open(file)&nbsp;&nbsp;</span><li class=alt><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class=keyword>try</span><span>:&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=keyword>return</span><span>&nbsp;fp.readline()&nbsp;&nbsp;</span></span><li class=alt><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class=keyword>finally</span><span>:&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fp.close()&nbsp;&nbsp;</span></ol></div><pre name=code class=python style=display:none>def get_status(file):
+    fp = open(file)
+    try:
+        return fp.readline()
+    finally:
+        fp.close()</pre>
+<h2>Usando las baterías</h2>
+<p>De vez en cuando la gente intenta reescribir cosas que ya se encuentran en las librerías estándar de Python, y normalmente el resultado es pobre. Normalmente es mucho mejor utilizar la extensa librería que incluye Python por defecto que reinventar la rueda.</p>
+<p>Un módulo muy útil que poca gente conoce es <code>os.path</code>. Este módulo facilita una aritmética de rutas adecuada a tu sistema operativo, y normalmente será una mejor opción que cualquier que puedas crear.</p>
+<p>Compara:</p>
+<div class=dp-highlighter><div class=bar><div class=tools><a href=#>view plain</a><a href=#>copy to clipboard</a><a href=#>print</a><a href=#>?</a></div></div><ol start=1 class=dp-py><li class=alt><span><span class=comment>#&nbsp;arg!</span><span>&nbsp;&nbsp;</span></span><li><span><span class=keyword>return</span><span>&nbsp;dir+</span><span class=string>"/"</span><span>+file&nbsp;&nbsp;</span></span><li class=alt><span><span class=comment>#&nbsp;mejor</span><span>&nbsp;&nbsp;</span></span><li><span><span class=keyword>return</span><span>&nbsp;os.path.join(dir,&nbsp;file)&nbsp;&nbsp;</span></span></ol></div><pre name=code class=python style=display:none># arg!
+return dir+"/"+file
+# mejor
+return os.path.join(dir, file)</pre>
+<p>Otras funciones útiles en <code>os.path</code> son <code>basename()</code>, <code>dirname()</code> y <code>splitext()</code>.</p>
+<p>Hay otras muchas funciones incluídas por defecto que la gente parece no conocer por alguna razón: <code>min()</code> y <code>max()</code>, por ejemplo, pueden hallar los valores mínimos/máximos de cualquier secuencia cuyos elementos sean comparables, pero a pesar de ello mucha gente escribe sus propias versiones de <code>min()</code> y <code>max()</code>. Otra función muy útil es <code>reduce()</code>. Un uso clásico de <code>reduce()</code> es el siguiente</p>
+<div class=dp-highlighter><div class=bar><div class=tools><a href=#>view plain</a><a href=#>copy to clipboard</a><a href=#>print</a><a href=#>?</a></div></div><ol start=1 class=dp-py><li class=alt><span><span class=keyword>import</span><span>&nbsp;sys,&nbsp;operator&nbsp;&nbsp;</span></span><li><span>nums&nbsp;=&nbsp;map(float,&nbsp;sys.argv[<span class=number>1</span><span>:])&nbsp;&nbsp;</span></span><li class=alt><span><span class=keyword>print</span><span>&nbsp;reduce(operator.add,&nbsp;nums)/len(nums)&nbsp;&nbsp;</span></span></ol></div><pre name=code class=python style=display:none>import sys, operator
+nums = map(float, sys.argv[1:])
+print reduce(operator.add, nums)/len(nums)</pre>
+<p>Este pequeño script imprime la media de todos los números pasados por línea de comandos. La función <code>reduce()</code> suma todos los números, y el resto es solo algo de pre y post procesado.</p>
+<p>De la misma forma, observa que <code>float()</code>, <code>int()</code> y <code>long()</code> aceptan todos argumentos de tipo cadena, por lo que se pueden utilizar para parsear -- asumiendo que estes dispuesto a enfrentarte a las excepciones <code>ValueError</code> que pueden lanzar.</p>
+<h2>Usando la barra invertida para continuar sentencias</h2>
+<p>Dado que Python interpreta el caracter de nueva línea como una marca de fin de sentencia, y dado que a menudo es más cómodo dividir las sentencias en varias líneas, mucha gente hace algo como esto:</p>
+<div class=dp-highlighter><div class=bar><div class=tools><a href=#>view plain</a><a href=#>copy to clipboard</a><a href=#>print</a><a href=#>?</a></div></div><ol start=1 class=dp-py><li class=alt><span><span class=keyword>if</span><span>&nbsp;foo.bar()[</span><span class=string>'first'</span><span>][</span><span class=number>0</span><span>]&nbsp;==&nbsp;baz.quux(</span><span class=number>1</span><span>,&nbsp;</span><span class=number>2</span><span>)[</span><span class=number>5</span><span>:</span><span class=number>9</span><span>]&nbsp;</span><span class=keyword>and</span><span>&nbsp;\&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;calculate_number(<span class=number>10</span><span>,&nbsp;</span><span class=number>20</span><span>)&nbsp;!=&nbsp;forbulate(</span><span class=number>500</span><span>,&nbsp;</span><span class=number>360</span><span>):&nbsp;&nbsp;</span></span><li class=alt><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=keyword>pass</span><span>&nbsp;&nbsp;</span></span></ol></div><pre name=code class=python style=display:none>if foo.bar()['first'][0] == baz.quux(1, 2)[5:9] and \
+   calculate_number(10, 20) != forbulate(500, 360):
+      pass</pre>
+<p>Deberías tener en cuenta que esto es peligroso: un caracter de espacio perdido después del <code>\</code> causaría que la línea no fuera correcta. En este caso, al menos se trataría de un error de sintaxis, pero si el código fuera:</p>
+<div class=dp-highlighter><div class=bar><div class=tools><a href=#>view plain</a><a href=#>copy to clipboard</a><a href=#>print</a><a href=#>?</a></div></div><ol start=1 class=dp-py><li class=alt><span><span>value&nbsp;=&nbsp;foo.bar()[</span><span class=string>'first'</span><span>][</span><span class=number>0</span><span>]*baz.quux(</span><span class=number>1</span><span>,&nbsp;</span><span class=number>2</span><span>)[</span><span class=number>5</span><span>:</span><span class=number>9</span><span>]&nbsp;\&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;calculate_number(<span class=number>10</span><span>,&nbsp;</span><span class=number>20</span><span>)*forbulate(</span><span class=number>500</span><span>,&nbsp;</span><span class=number>360</span><span>)&nbsp;&nbsp;</span></span></ol></div><pre name=code class=python style=display:none>value = foo.bar()['first'][0]*baz.quux(1, 2)[5:9] \
+        + calculate_number(10, 20)*forbulate(500, 360)</pre>
+<p>el error sería mucho menos evidente.</p>
+ 
+<p>Normalmente es mucho mejor usar la continuación implícita que se da dentro de los paréntesis.</p>
+<p>Esta versión es a prueba de balas:</p>
+<div class=dp-highlighter><div class=bar><div class=tools><a href=#>view plain</a><a href=#>copy to clipboard</a><a href=#>print</a><a href=#>?</a></div></div><ol start=1 class=dp-py><li class=alt><span><span>value&nbsp;=&nbsp;(foo.bar()[</span><span class=string>'first'</span><span>][</span><span class=number>0</span><span>]*baz.quux(</span><span class=number>1</span><span>,&nbsp;</span><span class=number>2</span><span>)[</span><span class=number>5</span><span>:</span><span class=number>9</span><span>]&nbsp;&nbsp;</span></span><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;calculate_number(<span class=number>10</span><span>,&nbsp;</span><span class=number>20</span><span>)*forbulate(</span><span class=number>500</span><span>,&nbsp;</span><span class=number>360</span><span>))&nbsp;&nbsp;</span></span></ol></div><pre name=code class=python style=display:none>value = (foo.bar()['first'][0]*baz.quux(1, 2)[5:9]
+        + calculate_number(10, 20)*forbulate(500, 360))</pre>
+</div>
+<div id=pie>
+<p class=centrado>
+</p>
+</div>
+</div>
+<noscript>
+<a href="http://s14.sitemeter.com/stats.asp?site=s14mundogeek" target="_top">
+<img src="http://s14.sitemeter.com/meter.asp?site=s14mundogeek" alt="Site Meter" border="0"></a>
+</noscript>
+<style>.dp-highlighter{font-family:"Consolas","Courier New",Courier,mono,serif;font-size:12px;background-color:#E7E5DC;width:99%;overflow:auto;margin:18px 0 18px 0!important;padding-top:1px}.dp-highlighter ol,.dp-highlighter ol li,.dp-highlighter ol li span{margin:0;padding:0;border:none}.dp-highlighter a,.dp-highlighter a:hover{background:none;border:none;padding:0;margin:0}.dp-highlighter .bar{padding-left:45px}.dp-highlighter ol{list-style:decimal;background-color:#fff;margin:0px 0px 1px 45px!important;padding:0px;color:#5C5C5C}.dp-highlighter ol li{list-style:decimal-leading-zero;list-style-position:outside!important;border-left:3px solid #6CE26C;background-color:#F8F8F8;color:#5C5C5C;padding:0 3px 0 10px!important;margin:0!important;line-height:14px}.dp-highlighter ol li.alt{background-color:#FFF;color:inherit}.dp-highlighter ol li span{color:black;background-color:inherit}.dp-highlighter .tools{padding:3px 8px 3px 10px;font:9px Verdana,Geneva,Arial,Helvetica,sans-serif;color:silver;background-color:#f8f8f8;padding-bottom:10px;border-left:3px solid #6CE26C}.dp-highlighter .tools a{font-size:9px;color:#a0a0a0;background-color:inherit;text-decoration:none;margin-right:10px}.dp-highlighter .tools a:hover{color:red;background-color:inherit;text-decoration:underline}.dp-highlighter .comment{color:#008200;background-color:inherit}.dp-highlighter .string{color:blue;background-color:inherit}.dp-highlighter .keyword{color:#069;font-weight:bold;background-color:inherit}</style>

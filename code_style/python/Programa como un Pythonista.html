@@ -1,0 +1,1518 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> <html data-lt-installed=true class="wefjvxjryk idc0_350" style><!--
+ Page saved with SingleFile 
+ url: http://mundogeek.net/traducciones/python-idiomatico/ 
+ saved date: Tue Jun 18 2024 10:34:23 GMT-0300 (hora estándar de Argentina)
+--><meta charset=utf-8>
+<style>:root{--sf-img-2: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAAB5CAIAAACiFAg/AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH1wITFRYWCSJMOwAAGsNJREFUeNrtXXlwG9d5/96euEmChEgRIilRB6mDlKzDumlJlnVMJVmOrTaN49iOE1/xZNLGacaZUWrP9Jim03SSjKcz8aSp48RWbMeWI9uVrMO2KIm6KeokKRI8QQI8wAMEce3u6x9vsVjcIAjKotIdDQQ8PLx9+9vv+32/73u7S4QxhrtsEwTh9u3b3d3dAwMDPp/P7/d7vV6MsVar5Xleq9UWFBRYrdYFCxYwDHPHZoXuKqQ6OzsvXLjQ3t4+NjamNBqNRo/HI0lSVGeDwTB37tzVq1fPnDnzLwipjo6Ourq61tZWQRDU7YlgUjaO4yoqKnbu3KnVau99pGpra+vq6rxeb1R7SpiUrbCwcPfu3Var9Z5Fanh4+MiRI01NTVHTEEVRp9MFg8F0YCKbyWTavn37okWLpmiqzFcIk91u//DDDwcHB30+X3t7u8vl6u/vHx8f93g84+PjBCydTqfX6y0WS35+fmlpqcFgiDuURqMRBOHYsWMzZswoKCi4p2yqu7v7wIEDTU1NN27cuHnz5sjISMqf6HS6xYsXV1VVlZaWRsGEECLOa7Van3zySZZl7xGkuru7X3311StXrly9ejUYDE7otyzLVlVV1dTU5ObmRsFEtpqams2bN98LSHV1dT399NPnz593u90ZD2K1Wrdv375gwYIomADAbDY/99xzHMdNb6RsNtuePXtu3Lgx+aH0ev2uXbsWLlwY+9XmzZtramqyO3PqTsI0Nja2e/furMAEAB6P57PPPnM4HHFjRdYnf+eQkiRp69atN2/eTEJARqNxQgnK0NDQkSNH1IKebL29vVEKdjqphH379p07dy6qsaKiYt68eaWlpYsXL967d29RUVFPT09zc/Phw4fPnTvX0NAwOjqafNi2trb6+vqNGzeqG91ud3Nzc3a11R1C6uDBg5988om6paio6IUXXvjpT38a1bOkpKSkpOTBBx8EgJ6enhdffPHYsWMejyfJ4A0NDcuWLTMajVFgTT/vwxi/8sorfr+ffMzLy9uyZUtjY2MsTFFbcXHxwYMHP/jgg+Li4iTdBgYGYrlP2d10Qurll19ubGwk73Nycvbu3bt///6cnJw0f75t27bjx4/PnTs3uUCLavH5fNMPqUOHDil5/44dO5YsWbJ69eoJjVBZWfnGG29E+VeU+FB7KMdxKQnurkPq3XffvX37Nnn/0EMPLVy4cNGiRRlUSDZv3vzMM88k+nZ8fLyzs1OBieO45A57NyL1xhtvkDcrVqxYuXIlwzArVqzIbKif//zns2bNSvQtcTeO43ieHxsbI7nOtEFqfHz8/PnzAGAwGGpqaiiKWrNmjcViyTCfQGjHjh2Jvg0GgyzL8jzvdrsRQtPMpt58803CF5WVlbm5uevXryfhP+Pt2WefTSLZNRoNEQdGozH9iHFXIHXkyBGS7q9du3byMAHA8uXLE0FA07SioUwmE0JoOiFVX19PDGrv3r2Th4nAkahQpy7yRRWw7naNLorirl27Wlpa9u3bt2XLlmwNO2PGjNbW1th2JZ7yPL98+fLphBRN06+//nrWh01E1YpXzpkzJz8/fxrXErK1xfW+nJwcpT1uxeovEamBgYG48JEiZ2FhYVVV1f8jBQAQl6RIVkhR1OzZs7Me9aYlUhhjJWtRNo1GM3/+fIqizGbz9u3bp2jX0wypkydPulyuqMbFixcXFhYaDIbHHntsigxq+iGllCXUW3l5uV6vX7VqVWFh4dTtepoh9fnnn0e1WK3WlStXWiyWDRs2TOmumbsNi4Dfd/H0x1fqPjXmziicVZ5vmWW2WPMtxcacgrfffvvKlSux+Q1FUUky53sQKffI4JkT71859QEHAY832N9xq/Xql4AQAMIAFMMdONYZdUFHdXX18uXLJ1OfmGZIOXvaao+83dxwTM+AnkYACBBgghBghAAB2Hp8zbfbI9IXnl19/0pGHGo8/95Ax1mzpdhsseYXFJstVl6ju9eQam289OXht5xtV/QcMnHhsEUhwBgDiWQYMIK6a44og1qzekVJoZ4drneN4MH2egmDhEHEIGLgdaY8y6x8i5V4rtliNVusRpN5+iElSeLViydqj7zlGezUs8jIRwcWBAgA5AsBEG5zSrdtETJqTmlRzYa19MhlAAwACDBDIWJ9CCEQ3V7HrU7HrXYJBAKfhBGjySsgqBXnF1jNFmv+DGuuuZCi6LsRKb/Pc6H247rj72D/sJZBBi5+8EUIMAaEMMYIAM5e71MblE7Lbt+2jXVfR1jApDsCwDJmgIGIKhohhgGefI0AQRCPdvQNd/Q2YUECQcSChCWgc/KL8mXPtRIXNhcUc7zmK0NqZKjv9In36k99xKOAlqGATSZQECIcBQjhS63BppYIhlpz/yqr3oWCHgCEictiAIQRRhgAEAYs+y3GCBAA+Q8BAuBoBHSEOhW9Dle7o892SZCwKIEgYUECo8lsVjnvgsWr78S1Lj1dt2uPvtNUf0LHAM+gkA0k27x+YXTMDwi5xvBbn95SLwhXL57/2LZqytdLTA+RweQXQGToUDsK7S3cM429Y4xFTIwOBAkHRPz4iz+bWptqvn725NF3elrqdRzK4RAghEOukXxDFMIAIEmHzznUMJWXFT/80EoYb8cIEQ+V3Y2YX8gOEQZAWGmGaFtLtXeEGAQMhQCA4xizJUeSxClBShSCV84frf3sndGBDh0DRh4hUCZP3CrFlCkAjOHULa+tvUtpnDkj79Fdm5lxG0aE7Qk9YUyGwhipwCLwYSTLDaI7MCIBAKeZHnIsvWxp2eDwuCRmGynvuPvcyY/qTrwveFw8A3pGOfMYYcIpoTdJwaIo1O3C5+pvKy15OfpHHt6lC9zGCJShgPAPxhhCfBTiJwWskK2B3FMFa/JjYVl66dLZOh0/ODyeTZsaGug9dfzdy6cOUZKfo0DDhMIRDrtJ6OiwfI4TT1cQ4dj5TuUqDJ2G3f1XOwtwi8ypKtRlsORxw7aGFT8noIVmgOTzlgIslqGXVpfp9TwZITtIdbffqj164OblLzgkchSiKFAmGnY5CEciFPKCJCf1/dq+nl6nHJ5pattDW0t1vRhLhKHJwQIOfSLxT2W2snvJuiFhKEx0qhiGql5aZjBo1AIwc6Qwxo3XztR+9k5XSwNLSVpZ+KmwIYhAyOYVfYRChJWAMs7d9l5saFI+btywbtEMN0hBmXRkKyU0rRo2wtbCuiFsehCeAISNPXoCDE0trS4zGiL0VIY8JQQDl88ePnXswJCzkwWskYVR2P5lZkU4ZOwgH5QSieTDicPubc7gn09cF0VZZ664r2rtfBpEL0YRAYEYLFbIWzbamFCIMISjX+pQSNNUdXWZ0aiNSSqkiSHlGRs5+8UHZz//k3dsiAHMIZADjMJEsmepzF05/5GEpdC82guGxqQ/HG4cHZWv21xYUb51eQEWxsIZDiaEHgIrROspQ6FyTpKEQpqmqqtKTSZt3PQrXaQG+7pPHfvjpTOfSgEfDRILkWcIh2cZOnkqKkWR3RRkVISFMQ6K6LeftDj75KWXuXNm7Vo/B4QRBZJYliEnB6m4PJNQiAEA0zRVVVWak6NLlKimRqq95eqpowduNZwGMUhhiSYsGnb2kFJSArbCuiiCsKLUYER/DAjB/xzpauuUr46eUzZz75ZFKOhKxTKqUIjkUKsOhRhjSVPC+HsBiwlDIUKIQlVLSnNzdAk5OYn3SZJ088rJ2qMHumzXQRQRlqhQOqbQtup8KtOICNhhwpK5KYLdSTcy1/dOua7dbCG7Lim2fOvh+32jPZLaHiHERxGZMI4KhQqspCVoXgeMXtDO5ofP0SSdjgmFFILqJaV5efpkxY+4jB7w+y7VfXr62LuDfd1IFECSSDIVRzdGiqOQkFEjGMHuKuOK6Hb86vjp89fJ3osseY8/vK6AH7VDFMtAmJ7UpBMZChUDxwBi/npgdCD6kDiOcDDEcBFGCkBVV5WazYYUWYckRCDlHnXVff6nc18eHHcPY0EALKlVXJgK5EONOOFxdKZiYBAmCxTD7g0d0mcnr5CiSkGe8esPb7AaRgmPhEwfoukpLKRCMS8yFALCUv4GAhNQLOWxh8ZRhUKMEEJLq0vy842p9JCKp/p6208d/WP9uSNBn08SgmSPijFH0nCYWVTKW+HyyG4QoTNj5WjHIP7waIPfHwCAXJNu3+6a8lw3AUmhIbWwUERQrOBWeF9CCOdvQIweBD/QLIheyu8gBq82UkThpdVllgJTWuJRkhhbU33t0Xearp8VAkEpGCTnUvb4sF1AXN2oogk1IlitgSP7R8jRER86cPgmuWjPoOP37qyptHgUOUqGBLX+TiW4CXyX7cY5mkCeiQOaAURT/kGI1S4Uqq4qm2ExpRn6JUmkjWJjwO0I+vxCIEikbqiKE6p9RVZ2UMgv5FpsbH/STX4T0Sh3QwgAgiL67f+2d9t7AUDDs3t21qwo9asH8fhEISjKZafQD0N7l40OQjOUh+fMzf3aDw8dbbhypaqqSqPVAxbR6E1KCijDkp7LqstmFqV7yezIqBfpyhiaZqsXFVEUwhgHA4LXF/T6gj5f0OcLeH1Bvy/o9wex2uxlrgGVZ8WwewxhRZ1SCeAPx3va2jtJZWPb1k1VlWXeUAmdvNC5Im8Qw4hARJ5IsxosCoAoRDFA0YBoRLESpan96LeSJFmL8nPyzAAA/iEkeCJiEeBlVROAKazRaZYNhS3E8yyvYXNBMQNi3dgfEH2+gI8g6A/4vILfH/T7g2GdGUYkijLjy9H3Tw7caGwFAJpCmx7YuHzV+tj7RikO+ESsIfoBEEVH3+t4+uSX3XY7AMxfUCE3+fpkPw258NLqUmtxXgZLJAxDs5KEaVpRQ3EKgBoNq9WwyloAhEjc7w/6fEG/L+jzExCDfn8wGBCTy9FD50cuNTSSUdavW71uw6aJTVrwI4RQDEyXL50/feo0iQzLV60FABC84LWrtAMsqy4psWayliVJIkMzbGwpPS5kUd9TFNJqOa2WiyiMI8CS5PMJPr/suQQ+vz8oBCWM4POrnjMh6bRq5X1btu7ICkxnTn1x4ouTgiABQPnsMvmObV8/wmJIdsGyqpLSkgyvapSRkiScCCQcsp84xaT4PYGiKJ2O1+l45RcESlGUht0B1jCwuHyNo3+M0+ZUr9joDUqClO5VJKLgoxClwCRJUuvtptvNN7u6unr7hhWTr1q2gqgF8PYqZFq92Dq7LPOnA0iiyDAMK+EAQAqrSmVlUT3jdKdpqiBXU5A3S1n4RKgfAHx+YXDE7xr2DQz7Bsm/EZ9ryDfuF8SIRWMkYRzw+4JBIRAMBAOCPyi4x6If2zFrpmVO+TwAgMAw9g8BAkB4SaW1fHbmFy5gwCHvk/xJDjpWsMYpE8ZrTdBTJb4BEICGZ2YVsrMKo/OJ0TF/b5+7t9/d0+fu7Xf39rl7+8d6+90+f7LbZufNmy9bgbefnLCK+TPnzLakuSaUCAdJEhmaZiQVT6VtOxPYdcox41ZpTQbeZOAryqNdZmjUG0awb4yA6BgYCwRFnU6zcvV6AMBiEI91Aob5c2eUzy4AwBPxigQqgYniqUT+k5iq0nfUGHvKZMszafNM2kXzZkRhPTjsHR4T9Sb/eEDwjA56c3mz2TxnjgUDYAyTXP+VRDn2JTsu5ZhSm0aSDpFARw896Q0hVJCnK8gDAC8AgIWHuXP9gaBsTPLLpC45oRiGlZIAjuMfdUp3S3NuU73ST4wJ40ntCQNgSaJohsWR3ocnMkRy/OJjGh99PEVQASbOhzPfBQYxuU3htIHCmdjO1D8lBYecD092b5IkUjQdbVOxR4GTWEj8npDIafEdhAuH3A/LtpX5OJIoUAybhKcyP66UVHUnnruDQygR58t8nxhLEkXTSRl9QqSeEVXhqcUqZFCT2RMm3scwsd6HJzCTjOgf7gSph6kAT5apCKNzEk7bfxJTVfpg3yl7kuOezFSTcD5FJTBJT2Y0R+PJ2A7G6dJ/tjWVTFeZmq0kihQdm83cM/pTbUkhH8ycp5gEjH5P6E+V7pwEqWNZTzHx9NQErOLu1Z+hxFjxvIy5KlSfknC60KZf/xz3Bq439zW1DXAsbdTzuSbN0soik4EHZZlwalLleEYV6YMZ1xKYeHX05DWC5Mc17g3+4s2642dsilPnGDU6Lds3MFZVUbhxZdlD6+flmjQTrWFlBhPCEfaFM7XNhCsOaZZUYs3LHxCe2/+R3ekGAAqhn7xQ88D9ZSzDAEBv/+j7h2/+6q1zf/jz1f3fe2DlEmuCMXH27pDFslDAWO2DGYwvSRJF00yi2JeB/qy70k1gAoDKuQUPritnGfn+neIZpu9/a80zjy13jXj//l8P//6jhqlPZsJUiyelqEjsY7mU6Vn6+rOrd0Q1epypPbp9kYZnMIZfv3uxpdM15aQeWZzKsPiJMaklMKn1VNr6c+PKMuU9TcdZntLruEVzLWTSv/rd2anVn5HFqclIEEkUKYbh0h0hDf1ZZs39x5c2zbQYZhWZvrGrKq5RmnPlS04v3+ztdoxOnV5Qi4RwcjNxvLB8XULSbGaCy3wAAA/cP/uB+2fH3vCk0H+OMRz4uh2js4pMU0fqSiEBT76Sl6KOPgX6U42BXbYpPEUkFaE+J0HqikbPoJQxufpnaHMMjE0hVYWrnThE7BkSFpaI8kxrjpmvv/cNemxdrtbOIVvXUGunSx0fBVGaWv2J1Xhl6IOjnoClqIyh6TRqCRPUnyRTutrUd+TU7dOXOt2eAAAYdFxFecHGVWWNrQMXrtlTjZkdqopacVDwSn/sbsdou8P3vVd+ydAMg1MVvCe0/i5J+MDH1z7+otk5MAYAOg2796GFuzcvKC8xk6saf/W7sxFITV0+Q4hKvYqliPX09uX2+OvqO/d9+9WCwlKGZjj5krVUaKWz/i6K0r/9+tTxOhv5uHtzxQvfWKXVsOHLQ+/ghuMViNP3QUGQTl7oWL1535LlmwCAYVLUPONVExKvv//izbMKTHserPzBU2tRZkNnS09FFacmsvJ+rqHbXFSx45HnyUeKZriJxYLE+lMUpRNnbUrjE3uXfsX1z5jiFMEunX002vpdHvrr331Nee4EyWayM/umtgGvTwjlw8b8HO1XW/+MU5zCkM7Ke9/gWENj399+9zX1A04ohBBN02me6+Rzd/SHb9f3+oWJ2yjOPlFFFqfSWXkf9wVPXerc/sjzs+dVq9spAACKyXAOkWempDj8nNuhEe9EVWXW9Wd0YpzGyrsk4VMXO+Yv2bhh699EfUUBAMOwGbOU+nPZzFyDLnxV72/euzzhpCi7WEUmxumsvF++0YP4gq898ePYrygAoCZqUwlInePop752n9JyvM72+4PRjyA7cdb2yRfNETWsKaOqKP5OuUjT1jXU3jv++HP/FPfxVQwAkPCXXBOnGb53P7jg8s3eM5flJyD995/qL97o2bFhPs/Rw25fc/vgkdoWSrWj3j73lOrPsIaKSQajtqER7/mr3fu+/Y8zZs6OOxRBipEkTNNZ0J80Rb32/c1vH7r6zqFrvoAAAFcbnVcb5ScfVFUU7v/epllFpuf2/5m03LL1OwfGCgsM/YOefLOWobL9hEMcCoAqoRCrPgMBofZix+pNj1avTPgkaYbwlCQJNJ3+eUqmPxFC39yz9NEdi85c6rpxu49hKJaltTyzYUXp3FIz6btySfHF6z0AMDzqe+rHH8wpyWvpcP3sH7bdt2hmFvUnjqkOR5J6+I6n0/Vd+TMrdj76YpLRiE2xkhQAoCc2i6SpspZnH1xXvnVdOagSGcUov/PXK7odoyQ4erxBu2P0Zz/adt+imdl3QpxEWMm7uNbsdPvYl374Gk0zqZCiWTGNckIG9c9E6WFlueV3//61T79oliRcYNYvrSwy52izXlRAylUbEcUpFakjsDtHb7YMfPsH/2nKSXGvCAMADJt24SXRrR4JgErSk+eYR7YtAlCeD5GFS9XjcVRsYhxObtyewJnLndv2Plu+4L6Uo1EAkN7yzJTVP6fyUqG4xSkcKhXUXuhYsGRDzbZvpDMUUZ5cZhBloBXvvP6MTYwJXheu2WltwWNPvZLmOBRRCV29o129I65hrz8gpDv7Kb7+M2upcmRiTDBr6RjsHfB/8/l/5jX6NIdhAGDNA480FxQ77LbOHtvosJOhKb2O1Ws5vY7Ta1mdjmNi1jhTUtXk7j/KDlXhBAXigaHxa83OfU/vLyyeM4H4EHXGvJ5Rh93m7Glz2FsdPTanvc3v82g4Rqdj9TpOr+UMOlanZRGiwje5h2RUSE+p/lc6qAJY7B3YKKJV/aOwRssAqT7XmChKFEI0TTEMxdAUQ1OCIJ2p77xv3Z49X/+7iUXSlLY97HI47W0Ou83R0+q02/qdXZIY1GlZg5bT6zm9jjPqOJ5jlKNJhJQK0+jDj0IKwrdKZgEphIBgxNAUotDlG73G/LnP/vCXNMNmGamYSrkw4Oxy9tgcdpvDbnPaW4ddTppCeh1n0HEGHafXc0YdxzB0IqSiHqCQBCnlGQeZIdXvcgsiBgAmZFOtHS6Xh3rpJ7/JyZvwLaRZePKp3zfe19sWAs7m7LF5xkY0PGPQcQY9Z9BxRj2v07IURUUhBeGHRsRCGYFUZmD1udxiCCmapgaHxpvbXU9//z/mVmbyx96m5Bmx7lGX025z2FsJ5fX1tAmCX6/lDHrOqOcNes6k5zU8G9e/UKRFTQqpQTfJPWga+f3C1aa+rbu/s2nnExkq/jvwNF2MJVd/j8Nuc9hbnT1tDrvN1d9NISDAGUOvLMtkl6oUpDDG15v75lSueeKFf8k8N/pK/m67EAz09baHokSbs8c2Ojyg4RmjnjfpeaOBM+p5g46nKDQZqiJIYYxbOly0puClV97Q6AwZz/mrQSp2I+rE0WNzyq9tAb+HcJzJwJNXnXZiuYRz0C1JuMfp7h8KPP/j/5o5a95kZni3IBVXnTjsNqe9TVYnjk4EksnAGw3E7niTgVcuIk2ElGvY29LheuzJnyxfO9k/iXH3IpWOOuE5mjwsgBid7LChrat3+Fqzc8W63Xsff3nyE5g2SKVUJw57q3d81KDjjAbepNeYDHxTW78xf86zL7/OTFBk3mtIpVAndtuYe+i5H72ea87OHzb6P2z8iafdlMVbAAAAAElFTkSuQmCC")}</style><style media="screen, projection">body{background-color:#777777;font-family:Arial,Helvetica,Sans-serif;font-size:12px;margin:0px}#titulo{background-color:#7B92B5;color:#ffffff}#menu{width:120px;float:left;text-align:right}#menu ul{display:inline;list-style-type:none;margin:0px;margin-left:5px;margin-right:5px;line-height:1.8em;font-size:13px;font-weight:bold;color:#ffffff}#menu a{color:#ffffff;text-decoration:none}#menu a:hover{text-decoration:underline}#contenido{width:720px;margin-left:auto;margin-right:auto;background-color:white;border-left:2px solid #7B92B5;border-right:2px solid #7B92B5}#contenido h1{font-size:24px;text-align:center}#texto{padding:0em 1em 0em 1em}#texto a:link,#texto a:visited{color:#7B92B5}#pie{clear:both;background-color:#6E87AA;color:#ffffff;font-size:10px;padding-top:15px;padding-left:5px;padding-bottom:15px}#pie a:link,#pie a:visited,#titulo a:link,#titulo a:visited{color:white;text-decoration:underline}.centrado{text-align:center;font-weight:bold}.first{margin-top:0!important}.last{margin-bottom:0!important}div.line-block{display:block;margin-top:1em;margin-bottom:1em}div.line-block div.line-block{margin-top:0;margin-bottom:0;margin-left:1.5em}ol.simple,ul.simple{margin-bottom:1em}ol.arabic{list-style:decimal}p.attribution{text-align:right;margin-left:50%}pre.literal-block,pre.doctest-block{margin-left:2em;margin-right:2em;background-color:#eeeeee}span.pre{white-space:pre}table.borderless{border:0}table.borderless td{border:0}table.docutils{margin-top:0.5em;margin-bottom:0.5em}table.docutils td,table.docutils th{padding-left:0.5em;padding-right:0.5em;vertical-align:top}h1 tt.docutils{font-size:100%}tt.docutils{background-color:#eeeeee}</style>
+<title>Programa como un Pythonista: Python Idiomático</title>
+<meta name=referrer content=no-referrer><link type=image/x-icon rel="shortcut icon" href=data:image/vnd.microsoft.icon;base64,><link rel=canonical href=http://mundogeek.net/traducciones/python-idiomatico/><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:; frame-src 'self' data:;"><style>img[src="data:,"],source[src="data:,"]{display:none!important}</style></head>
+<body>
+<div id=menu>
+ <ul>
+ <li><a href=http://mundogeek.net/>Bitácora</a></li>
+ <li><a href=http://mundogeek.net/traducidos/>Traducciones</a></li>
+ <li><a href=http://mundogeek.net/tutorial-python/ title="Tutorial de Python">Tutorial de Python</a></li>
+ </ul>
+</div>
+<div id=contenido>
+<div id=titulo>
+<h1>Programa como un Pythonista: Python Idiomático</h1>
+<p class=centrado><b>Por David Goodger</b></p>
+<p class=centrado>Traducción al castellano de "Code Like a Pythonista: Idiomatic Python"<br>
+por <a href=http://mundogeek.net/>Raúl González Duque</a> el día 8 de Junio de 2008
+</p>
+</div>
+<div id=texto>
+<p>En este tutorial interactivo, trataremos en profundidad algunos modismos y técnicas esenciales de Python, añadiendo así algunas herramientas útiles a tu caja de herramientas.</p>
+<p class=small>©2006-2008, licenciado bajo <a class="reference external" href=http://creativecommons.org/licenses/by-sa/3.0/>Creative Commons
+Attribution/Share-Alike (BY-SA)</a>.</p>
+<div class="handout container">
+<p>Mis credenciales: Soy</p>
+<ul class=simple>
+<li>un habitante de Montreal,</li>
+<li>padre de dos grandes niños, marido de una mujer muy especial,</li>
+<li>programador en Python a tiempo completo,</li>
+<li>autor del proyecto <a class="reference external" href=http://docutils.sourceforge.net/>Docutils</a> y de <a class="reference external" href=http://docutils.sourceforge.net/rst.html>reStructuredText</a>,</li>
+<li>un editor de las Propuestas de Mejora de Python (Python Enhancement Proposals o PEPs),</li>
+<li>uno de los organizadores de la PyCon 2007, y coordinador de PyCon 2008,</li>
+<li>un miembro de la Fundación de Software Python,</li>
+<li>Director de la Fundación el año pasado, y su Secretario actual.</li>
+</ul>
+<p>En el tutorial que presenté en la PyCon 2006 (llamado Procesamiento de Datos y Texto), me sorprendí de las reacciones que coseché con algunas técnicas que utilicé y que yo pensaba que eran bastante conocidas. Pero muchos de los asistentes no conocían estas herramientas que los programadores experimentados de Python utilizan sin pensar.</p>
+<p>Muchos de vosotros habréis visto algunas de estas técnicas y modismos anteriormente. Con un poco de suerte aprenderéis algunas técnicas que no habíais visto antes y puede que también algo nuevo acerca de las que ya conocíais.</p>
+</div>
+<div class=section id=the-zen-of-python-1>
+<h1>El Zen de Python (1)</h1>
+<div class="handout container">
+<p>Estas son las guías generales de Python, pero están abiertas a interpretación. Se requiere de sentido del humor para interpretarlas correctamente.</p>
+<p>Si utilizas un lenguaje de programación cuyo nombre se debe a un grupo de cómicos, es conveniente tener sentido del humor.</p>
+</div>
+<blockquote class=small>
+<div class=line-block>
+<div class=line>Hermoso es mejor que feo.</div>
+<div class=line>Explícito es mejor que implícito.</div>
+<div class=line>Simple es mejor que complejo.</div>
+<div class=line>Complejo es mejor que complicado.</div>
+<div class=line>Plano es mejor que anidado.</div>
+<div class=line>Disperso es mejor que denso.</div>
+<div class=line>La legibilidad cuenta.</div>
+<div class=line>Los casos especiales no son suficientemente especiales como para romper las reglas.</div>
+<div class=line>Aunque lo pragmático gana a la pureza.</div>
+<div class=line>Los errores nunca deberían dejarse pasar silenciosamente.</div>
+<div class=line>A menos que se silencien explícitamente.</div>
+<div class=line><br></div>
+<div class=line-block>
+<div class=line>...</div>
+</div>
+</div>
+</blockquote>
+</div>
+<div class=section id=the-zen-of-python-2>
+<h1>El Zen de Python (2)</h1>
+<blockquote class=small>
+<div class=line-block>
+<div class=line>Cuando te enfrentes a la ambigüedad, rechaza la tentación de adivinar.</div>
+<div class=line>Debería haber una -- y preferiblemente sólo una -- manera obvia de hacerlo.</div>
+<div class=line>Aunque puede que no sea obvia a primera vista a menos que seas holandés. (NT: Guido van Rossum, creador de Python, es holandés).</div>
+<div class=line>Ahora es mejor que nunca.</div>
+<div class=line>Aunque muchas veces nunca es mejor que <em>ahora mismo</em>.</div>
+<div class=line>Si la implementación es difícil de explicar, es una mala idea.</div>
+<div class=line>Si la implementación es sencilla de explicar, puede que sea una buena idea.</div>
+<div class=line>Los espacios de nombres son una gran idea -- ¡tengamos más de esas!</div>
+</div>
+<p class=attribution>—Tim Peters</p>
+</blockquote>
+<div class="handout container">
+<p>Este poema en particular comenzó como una especie de broma, pero contiene grandes verdades acerca de la filosofía detrás de Python. El Zen de Python ha sido formalizado en el PEP 20, en cuyo resumen podemos leer:</p>
+<blockquote>
+<p>Hace mucho tiempo el entusiasta de Python Tim Peters plasmó de forma concisa los principios de diseño por los que guiarse al escribir en Python según el BDFL (NT: Benevolent Dictator for Life o Dictador Benévolo de por Vida, en este caso Guido van Rossum, el creador de Python) en 20 aforismos, de los cuales sólo 19 han pasado a forma escrita.</p>
+<p class=attribution>—<a class="reference external" href=http://www.python.org/dev/peps/pep-0020/>http://www.python.org/dev/peps/pep-0020/</a></p>
+</blockquote>
+<p>Puedes decidir por ti mismo si te consideras un "Pythoneer" o un "Pythonista". Los términos tienen connotaciones algo distintas.</p>
+</div>
+<p class=incremental>En caso de duda:</p>
+<pre class="incremental literal-block">import this
+</pre>
+<div class="handout container">
+<p>Pruébalo en el intérprete de Python:</p>
+<pre class=doctest-block>&gt;&gt;&gt; import this
+</pre>
+<p>Aquí tienes otro huevo de pascua:</p>
+<pre class=doctest-block>&gt;&gt;&gt; from __future__ import braces
+  File "&lt;stdin&gt;", line 1
+SyntaxError: not a chance
+</pre>
+<p>¡Menudo grupo de humoristas! :-)</p>
+</div>
+</div>
+<div class=section id=coding-style-readability-counts>
+<h1>Estilo de Programación: La legibilidad cuenta</h1>
+<blockquote>
+<p>Los programas deben escribirse para que los lean las personas, y sólo de forma circunstancial para que los ejecuten las máquinas.</p>
+<p class=attribution>—Abelson y Sussman, <em>Estructura e Interpretación de Programas de Computadora</em></p>
+</blockquote>
+<div class="handout container">
+Intenta que tus programas sean fáciles de leer y obvios.</div>
+</div>
+<div class=section id=pep-8-style-guide-for-python-code>
+<h1>PEP 8: Guía de Estilo del Código Python</h1>
+<p>Una lectura muy interesante:</p>
+<blockquote>
+<a class="reference external" href=http://mundogeek.net/traducciones/guia-estilo-python.htm>http://mundogeek.net/traducciones/guia-estilo-python.htm</a></blockquote>
+<p>PEP = Python Enhancement Proposal (Propuesta de Mejora de Python)</p>
+<div class="handout container">
+<p>Un PEP es un documento de diseño que proporciona información a la comunidad Python, o describe una nueva característica para Python o sus procesos o entorno.</p>
+<p>La comunidad Python tiene sus propios estándares en lo que al estilo del código se refiere, listados en el PEP 8. Estos estándares son distintos a los de otras comunidades, como C, C++, C#, Java, VisualBasic, etc.</p>
+<p>Debido a que la indentación y los espacios en blanco son tan importantes en Python, la Guía de Estilo del Código Python es prácticamente un estándar. ¡Sería inteligente seguir esta guía! La mayor parte de los proyectos de código abierto y los proyectos caseros siguen la guía de estilo casi al pie de la letra (o eso espero).</p>
+</div>
+</div>
+<div class=section id=whitespace-1>
+<h1>Espacios en blanco 1</h1>
+<ul class=incremental>
+<li><p class=first>4 espacios por cada nivel de indentación.</p>
+</li>
+<li><p class=first>Evita los caracteres de tabulación.</p>
+</li>
+<li><p class=first><strong>Nunca</strong> mezcles caracteres de tabulación y espacios.</p>
+</li>
+<li><p class=first>Una línea en blanco entre funciones.</p>
+</li>
+<li><p class=first>Dos líneas en blanco entre clases.</p>
+</li>
+</ul>
+</div>
+<div class=section id=whitespace-2>
+<h1>Espacios en blanco 2</h1>
+<ul class="incremental simple">
+<li>Añade un espacio después de las comas "," en diccionarios, listas, tuplas, y listas de parámetros, y después de los dos puntos ":" en los diccionarios, pero no antes.</li>
+<li>Pon espacios alrededor de las asignaciones y las comparaciones (excepto en las listas de parámetros).</li>
+<li>No coloques espacios justo después de abrir un paréntesis o antes de cerrar un paréntesis o justo antes de una lista de parámetros.</li>
+<li>No dejes espacios al inicio o final de las cadenas de documentación.</li>
+</ul>
+<pre class="incremental literal-block">def haz_cuadrados(clave, valor=0):
+    """Devuelve un diccionario y una lista..."""
+    d = {clave: valor}
+    l = [clave, valor]
+    return d, l
+</pre>
+</div>
+<div class=section id=naming>
+<h1>Nombres</h1>
+<ul class=incremental>
+<li><p class=first><tt class="docutils literal"><span class=pre>minusculas_con_guiones</span></tt> para funciones, métodos, atributos</p>
+</li>
+<li><p class=first><tt class="docutils literal"><span class=pre>minusculas_con_guiones</span></tt> o <tt class="docutils literal"><span class=pre>TODO_MAYUSCULAS</span></tt> para las constantes</p>
+</li>
+<li><p class=first><tt class="docutils literal"><span class=pre>PalabrasEnMayusculas</span></tt> para las clases</p>
+</li>
+<li><p class=first><tt class="docutils literal"><span class=pre>camelCase</span></tt> <strong>sólo</strong> si es necesario adaptarse a convenciones que ya se utilizaban en el código</p>
+</li>
+<li><p class=first>Atributos: <tt class="docutils literal"><span class=pre>interfaz</span></tt>, <tt class="docutils literal"><span class=pre>_interno</span></tt>, <tt class="docutils literal"><span class=pre>__privado</span></tt></p>
+<div class="handout container">
+<p>Pero intenta evitar la forma <tt class="docutils literal"><span class=pre>__privado</span></tt>. Yo en particular nunca la utilizo.
+Creeme. Si la usas, en el futuro lo lamentarás.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class=section id=long-lines-continuations>
+<h1>Líneas largas</h1>
+<p class=incremental>Mantén las líneas de código por debajo de los 80 caracteres.</p>
+<p class=incremental>Aprovecha que las sentencias continúan en la siguiente línea de forma implícita dentro de paréntesis/llaves/corchetes:</p>
+<pre class="incremental literal-block">def __init__(self, primero, segundo, tercero,
+             cuarto, quinto, sexto):
+    salida = (primero + segundo + tercero
+              + cuarto + quinto + sexto)
+</pre>
+<p class=incremental>Utiliza las barras invertidas como último recurso:</p>
+<pre class="incremental literal-block">ParteIzquierda.muy_larga \
+    = parte_derecha.incluso_mas()
+</pre>
+<div class="handout container">
+Las barras invertidas no son un mecanismo robusto; tienen que situarse al final de la línea. Si añadieras un espacio después de la barra invertida, dejaría de funcionar. Además, afean el código.</div>
+</div>
+<div class=section id=long-strings>
+<h1>Cadenas largas</h1>
+<div class="handout container">
+El parseador concatena los literales de cadena adyacentes automáticamente:</div>
+<pre class="incremental doctest-block">&gt;&gt;&gt; print 'u' 'n' "o"
+uno
+</pre>
+<div class="handout container">
+<p>Los espacios entre las cadenas no son necesarios, pero ayudan a la legibilidad. Se puede utilizar cualquier tipo de comillas:</p>
+<pre class=doctest-block>&gt;&gt;&gt; print 't' r'\/\/' """o"""
+t\/\/o
+</pre>
+<p>La cadena con una "r" como prefijo es una cadena "raw" (cruda). En las cadenas raw las barras invertidas no se consideran caracteres de escape. Son útiles para las expresiones regulares y las rutas del sistema de ficheros de Windows.</p>
+<p>Ten en cuenta que las variables cadena <strong>no</strong> se concatenan automaticamente:</p>
+<pre class=doctest-block>&gt;&gt;&gt; a = 'tres'
+&gt;&gt;&gt; b = 'cuatro'
+&gt;&gt;&gt; a b
+  File "&lt;stdin&gt;", line 1
+    a b
+      ^
+SyntaxError: invalid syntax
+</pre>
+<p>Esto se debe a que la concatenación automática se trata de una característica del parseador/compilador de Python, no del intérprete. Es necesario utilizar el operador "+" para concatenar cadenas en tiempo de ejecución.</p>
+</div>
+<pre class="incremental literal-block">texto = ('Se pueden crear cadenas mas largas '
+        'a partir de varias cadenas cortas.')
+</pre>
+<div class="handout container">
+<p>Los paréntesis permiten que la sentencia continúe en la siguiente línea de forma implícita.</p>
+<p>Para las cadenas de varias líneas se utilizan comillas triples:</p>
+</div>
+<pre class="incremental literal-block">"""Triples
+comillas
+dobles"""
+</pre>
+<pre class="incremental literal-block">'''\
+Triples
+comillas
+simples\
+'''
+</pre>
+<div class="handout container">
+Observa que en el último ejemplo (el de las triples comillas simples), se utilizan barras invertidas para escapar los caracteres de nueva línea. Esto elimina los retornos de carro extra, proporcionando una estructura muy legible, con el texto y las comillas justificadas a la izquierda.
+Las barras invertidas se deben colocar al final de las respectivas líneas.</div>
+</div>
+<div class=section id=compound-statements>
+<h1>Sentencias compuestas</h1>
+<p>Bien:</p>
+<pre class=literal-block>if foo == 'bla':
+    haz_algo()
+haz_primero()
+haz_segundo()
+haz_tercero()
+</pre>
+<p>Mal:</p>
+<pre class=literal-block>if foo == 'bla': haz_algo()
+haz_primero(); haz_segundo(); haz_tercero()
+</pre>
+<div class="handout container">
+<p>El espacio en blanco y la indentación son indicadores visuales muy buenos del flujo del programa. La indentación de la primera versión muestra al lector que algo está ocurriendo, mientras que la falta de indentación del segundo ejemplo hace que el "if" pase más desapercibido.</p>
+<p>Utilizar varios estamentos en la misma línea es un pecado capital. En Python,
+<em>la legibilidad cuenta</em>.</p>
+</div>
+</div>
+<div class=section id=docstrings-comments>
+<h1>Cadenas de documentación y comentarios</h1>
+<p>Cadenas de documentación = <strong>Cómo usar</strong> el código</p>
+<p>Comentarios = <strong>Por qué</strong> (razones) y <strong>cómo funciona el código</strong></p>
+<div class="handout container">
+<p>Las cadenas de documentación explican <strong>cómo</strong> usar el código, y están destinadas a los <strong>usuarios</strong> del código. Usos de las cadenas de documentación:</p>
+<ul class=simple>
+<li>Explicar el propósito de la función aunque pueda parecer obvia para tí, ya que puede no ser tan obvia para otras personas.</li>
+<li>Describir los parámetros que espera la función, los valores de retorno, y las excepciones que puede lanzar.</li>
+<li>Si el método está fuertemente acoplado con un único llamador, menciónalo (aunque deberías tener cuidado ya que puede cambiar más tarde).</li>
+</ul>
+<p>Los comentarios explican el <strong>por qué</strong>, y están dirigidos a <strong>las personas que van a mantener</strong> tu código. Puedes incluir notas para tí mismo, como:</p>
+<pre class=literal-block># !!! BUG: ...
+
+# !!! FIX: Esto es una chapuza
+
+# ??? ¿Por qué está esto aquí?
+</pre>
+<p>Ambos grupos te incluyen a ti, ¡así que asegúrate de escribir buenas cadenas de documentación y comentarios!</p>
+<p>Las cadenas de documentación son muy útiles en el modo interactivo (<tt class="docutils literal"><span class=pre>help()</span></tt>) y para sistemas de auto documentación.</p>
+<p>Tener cadenas de documentación o comentarios incorrectos es mucho peor que no tenerlos en absoluto. ¡Mantenlos actualizados! Cuando hagas cambios, asegurate de que los comentarios y las cadenas de documentación continúan siendo consistentes con el código, y no lo contradicen.</p>
+<p>Existe un PEP dedicado por completo a las cadenas de documentación, el PEP 257, "Convenciones sobre cadenas de documentación":</p>
+<blockquote>
+<a class="reference external" href=http://www.python.org/dev/peps/pep-0257/>http://www.python.org/dev/peps/pep-0257/</a></blockquote>
+</div>
+</div>
+<div class=section id=practicality-beats-purity>
+<h1>Pragmatismo antes que pureza</h1>
+<blockquote>
+<p>La consistencia estúpida es el demonio de las mentes pequeñas.</p>
+<p class=attribution>—Ralph Waldo Emerson</p>
+</blockquote>
+<div class="handout container">
+<p>Siempre existen excepciones. Del PEP 8:</p>
+<blockquote>
+<p>Lo que es más importante: aprende a saber cuándo ser inconsistente -- algunas veces la guía de estilo no debería aplicarse. Cuando tengas dudas, usa tu criterio. Mira otros ejemplos y decide qué parece mejor. ¡Y no dudes en preguntar!</p>
+<p>Dos buenas razones para romper una regla en particular:</p>
+<ol class="arabic simple">
+<li>Cuando aplicar la regla produciría que el código fuera menos legible, incluso para personas que están acostumbradas a leer código que sigue las normas.</li>
+<li>Para ser consistente con código heredado que también rompe las normas 
+(puede que por razones históricas) -- aunque esto también puede verse como una oportunidad de arreglar el desaguisado de otra persona (al más puro estilo XP).</li>
+</ol>
+</blockquote>
+</div>
+<p><span class=incremental>... pero es importante saber establecer límites</span></p>
+</div>
+<div class=section id=idiom-potpourri>
+<h1>Popurrí de modismos</h1>
+<p>Una selección de idioms o modismos pequeños y útiles.</p>
+<div class="handout container">
+<p>Pasemos ahora a la parte importante del tutorial: montones de modismos.</p>
+<p>Vamos a comenzar con algunos más sencillos e iremos aumentando el nivel poco a poco.</p>
+</div>
+</div>
+<div class=section id=swap-values>
+<h1>Intercambiar valores</h1>
+<p>En otros lenguajes:</p>
+<pre class=literal-block>temporal = a
+a = b
+b = temporal
+</pre>
+<p class=incremental>En Python:</p>
+<pre class="incremental literal-block">b, a = a, b
+</pre>
+<div class="handout container">
+Puede que hayas visto esto antes. ¿Pero sabías cómo funciona?</div>
+<ul class="incremental simple">
+<li>La <strong>coma</strong> es el operador que se utiliza para construir las tuplas.</li>
+<li>Se crea una tupla a la derecha del igual (empaquetamos los valores en una tupla).</li>
+<li>A la izquierda tenemos otra tupla que es el destino (desempaquetamos la tupla).</li>
+</ul>
+<div class="handout container">
+<p>La parte derecha se <strong>desempaqueta</strong> asignando los valores a los nombres de la parte izquierda.</p>
+<p>Más ejemplos de desempaquetado:</p>
+<pre class=doctest-block>&gt;&gt;&gt; l =['David', 'Pythonista', '+1-514-555-1234']
+&gt;&gt;&gt; nombre, rango, tlf = l
+&gt;&gt;&gt; nombre
+'David'
+&gt;&gt;&gt; rango
+'Pythonista'
+&gt;&gt;&gt; tlf
+'+1-514-555-1234'
+</pre>
+<p>Son útiles para usar en bucles que iteran sobre datos estructurados:</p>
+<p><tt class="docutils literal"><span class=pre>l</span></tt> (L) es la lista que acabamos de crear (los datos de David). Así que 
+<tt class="docutils literal"><span class=pre>personas</span></tt> es una lista que contiene dos elementos, siendo cada uno de ellos una lista de 3 elementos.</p>
+<pre class=doctest-block>&gt;&gt;&gt; personas = [l, ['Guido', 'BDFL', 'desconocido']]
+&gt;&gt;&gt; for (nombre, rango, tlf) in personas:
+...     print nombre, tlf
+...
+David +1-514-555-1234
+Guido desconocido
+</pre>
+<p>Cada elemento de <tt class="docutils literal"><span class=pre>personas</span></tt> se desempaqueta en una tupla <tt class="docutils literal"><span class=pre>(nombre,</span> <span class=pre>rango,</span>
+<span class=pre>tlf)</span></tt>.</p>
+<p>Se puede anidar de forma arbitraria (sólo hay que asegurarse de que la estructura de la parte izquierda y la derecha se correspondan):</p>
+<pre class=doctest-block>&gt;&gt;&gt; david, (gnombre, grango, gtlf) = personas
+&gt;&gt;&gt; gnombre
+'Guido'
+&gt;&gt;&gt; grango
+'BDFL'
+&gt;&gt;&gt; gtlf
+'desconocido'
+&gt;&gt;&gt; david
+['David', 'Pythonista', '+1-514-555-1234']
+</pre>
+</div>
+</div>
+<div class=section id=more-about-tuples>
+<h1>Más acerca de las tuplas</h1>
+<div class="handout container">
+Hemos visto que el operador de construcción de tuplas es la <strong>coma</strong>, no los paréntesis. Por ejemplo:</div>
+<pre class="incremental doctest-block">&gt;&gt;&gt; 1,
+(1,)
+</pre>
+<div class="handout container">
+El intérprete de Python muestra los paréntesis por claridad, te recomiendo que tú también los utilices:</div>
+<pre class="incremental doctest-block">&gt;&gt;&gt; (1,)
+(1,)
+</pre>
+<div class="handout container">
+¡No te olvides de la coma!</div>
+<pre class="incremental doctest-block">&gt;&gt;&gt; (1)
+1
+</pre>
+<div class="handout container">
+En una tupla de un solo elemento, es necesario añadir una coma al final; en tuplas de 2 elementos o más, la coma al final es opcional. Para tuplas vacías se puede utilizar un par de paréntesis para atajar:</div>
+<pre class="incremental doctest-block">&gt;&gt;&gt; ()
+()
+</pre>
+<pre class="incremental doctest-block">&gt;&gt;&gt; tuple()
+()
+</pre>
+<div class="handout container">
+Un fallo muy común es añadir una coma incluso cuando lo que buscas no es una tupla. Es fácil no darse cuenta de que hay una coma en el código:</div>
+<pre class="incremental doctest-block">&gt;&gt;&gt; valor = 1,
+&gt;&gt;&gt; valor
+(1,)
+</pre>
+<div class="handout container">
+Por lo tanto, si ves una tupla en un lugar donde no debería existir, ¡comprueba las comas!</div>
+</div>
+<div class=section id=interactive>
+<h1>"_" interactivo</h1>
+<div class="handout container">
+<p>Esta es una característica muy útil aunque, sorprendentemente, muy poca gente la conoce.</p>
+<p>En el intérprete interactivo, cada vez que evalúas una expresión o llamas a una función, el resultado se almacena en una variable temporal llamada <tt class="docutils literal"><span class=pre>_</span></tt>
+(un guión bajo):</p>
+</div>
+<pre class="incremental doctest-block">&gt;&gt;&gt; 1 + 1
+2
+&gt;&gt;&gt; _
+2
+</pre>
+<p class=incremental><tt class="docutils literal"><span class=pre>_</span></tt> almacena el valor de la última expresión <em>impresa</em>.</p>
+<div class="handout container">
+<p>Cuando el resultado es <tt class="docutils literal"><span class=pre>None</span></tt>, no se imprime nada, por lo que <tt class="docutils literal"><span class=pre>_</span></tt> no cambia. ¡Qué conveniente!</p>
+<p>Esta característica sólo funciona en el intérprete interactivo, no dentro de los módulos.</p>
+<p>Es especialmente útil cuando trabajas en un problema de forma interactiva, y quieres almacenar el resultado para el próximo paso:</p>
+</div>
+<pre class="incremental doctest-block">&gt;&gt;&gt; import math
+&gt;&gt;&gt; math.pi / 3
+1.0471975511965976
+&gt;&gt;&gt; angulo = _
+&gt;&gt;&gt; math.cos(angulo)
+0.50000000000000011
+&gt;&gt;&gt; _
+0.50000000000000011
+</pre>
+</div>
+<div class=section id=building-strings-from-substrings>
+<h1>Construyendo cadenas a partir de subcadenas</h1>
+<div class="handout container">
+Comenzaremos con una lista de cadenas:</div>
+<pre class=literal-block>colores = ['rojo', 'azul', 'verde', 'amarillo']
+</pre>
+<div class="handout container">
+Ahora queremos unir todas las cadenas en una cadena más larga. Especialmente cuando tenemos un gran número de subcadenas...</div>
+<p class=incremental>No hagas esto:</p>
+<pre class="incremental literal-block">resultado = ''
+for s in colores:
+    resultado += s
+</pre>
+<div class="handout container">
+<p>Esto es muy ineficiente.</p>
+<p>Tiene un consumo de memoria enorme y da muy mal rendimiento. Lo que hace el código es calcular, almacenar, y descartar cada paso intermedio.</p>
+</div>
+<p class=incremental>En su lugar podemos hacer esto:</p>
+<pre class="incremental literal-block">resultado = ''.join(colores)
+</pre>
+<div class="handout container">
+<p>El método <tt class="docutils literal"><span class=pre>join()</span></tt> de las cadenas realizan la copia en un solo paso.</p>
+<p>Si estás trabajando con unas pocas docenas o cientos de cadenas, puede que no haya mucha diferencia. Pero deberías acostumbrarte a construir las cadenas de forma más efectiva, porque con miles de cadenas o con bucles, hay una gran diferencia.</p>
+</div>
+</div>
+<div class=section id=building-strings-variations-1>
+<h1>Construyendo cadenas, Variaciones 1</h1>
+<div class="handout container">
+A continuación tenéis algunas técnicas para usar el método <tt class="docutils literal"><span class=pre>join()</span></tt>.</div>
+<p class=incremental>Si quieres espacios entre las subcadenas:</p>
+<pre class="incremental literal-block">resultado = ' '.join(colores)
+</pre>
+<p class=incremental>O comas y espacios:</p>
+<pre class="incremental literal-block">resultado = ', '.join(colores)
+</pre>
+<p class=incremental>Aquí tenemos un caso muy común:</p>
+<pre class="incremental literal-block">colores = ['rojo', 'azul', 'verde', 'amarillo']
+print 'Elige', ', '.join(colores[:-1]), \
+      'o', colores[-1]
+</pre>
+<div class="handout container">
+<p>Para que la frase tenga más sentido gramáticamente, pondremos comas entre todos los valores a excepción del último par, donde queremos la palabra "o". El particionado de listas es la herramienta adecuada para el trabajo. Con <tt class="docutils literal"><span class=pre>[:-1]</span></tt> obtenemos todos los valores a excepción del último, y los unimos utilizando una coma y un espacio.</p>
+<p>Por supuesto, este ejemplo no funcionaría para listas de 0 o 1 elementos.</p>
+</div>
+<div class="handout container">
+Salida:</div>
+<pre class="incremental literal-block">Elige rojo, azul, verde o amarillo
+</pre>
+</div>
+<div class=section id=building-strings-variations-2>
+<h1>Construyendo cadenas, Variaciones 2</h1>
+<p>Si necesitas aplicar una función para generar las subcadenas:</p>
+<pre class=literal-block>resultado = ''.join(funcion(i) for i in items)
+</pre>
+<div class="handout container">
+Esto requiere del uso de una <em>expresión generadora</em>, que cubriremos en profundidad más tarde.</div>
+<p class=incremental>Si necesitas construir las subcadenas de forma incremental, primero añádelas a una lista:</p>
+<pre class="incremental literal-block">items = []
+...
+items.append(item)  # varias veces
+...
+# items ya esta completo
+resultado = ''.join(funcion(i) for i in items)
+</pre>
+<div class="handout container">
+Añadimos las partes a una lista de forma que podamos usar el método <tt class="docutils literal"><span class=pre>join</span></tt> por cuestiones de eficiencia.</div>
+</div>
+<div class=section id=use-in-where-possible-1>
+<h1>Utiliza <tt class="docutils literal"><span class=pre>in</span></tt> cuando sea posible (1)</h1>
+<p>Bien:</p>
+<pre class=literal-block>for clave in d:
+    print clave
+</pre>
+<div class="handout container">
+<ul class=simple>
+<li>Normalmente <tt class="docutils literal"><span class=pre>in</span></tt> es más rápido.</li>
+<li>Este patrón funciona con elementos almacenados en cualquier tipo de contenedor (como listas, tuplas, y conjuntos).</li>
+<li><tt class="docutils literal"><span class=pre>in</span></tt> también es un operador (como veremos más tarde).</li>
+</ul>
+</div>
+<p>Mal:</p>
+<pre class=literal-block>for clave in d.keys():
+    print clave
+</pre>
+<div class="handout container">
+Esto se limita a objetos que cuenten con un método <tt class="docutils literal"><span class=pre>keys()</span></tt>.</div>
+</div>
+<div class=section id=use-in-where-possible-2>
+<h1>Utiliza <tt class="docutils literal"><span class=pre>in</span></tt> cuando sea posible (2)</h1>
+<p>Pero <tt class="docutils literal"><span class=pre>.keys()</span></tt> es <strong>necesario</strong> cuando se modifica el diccionario:</p>
+<pre class=literal-block>for clave in d.keys():
+    d[str(clave)] = d[clave]
+</pre>
+<div class="handout container">
+<tt class="docutils literal"><span class=pre>d.keys()</span></tt> crea una lista estática de las claves del diccionario. De otra forma, se lanzaría una excepción "RuntimeError: dictionary
+changed size during iteration" (el tamaño del diccionario cambió durante la iteración).</div>
+<p class=incremental>Por motivos de consistencia, utiliza <tt class="docutils literal"><span class=pre>clave</span> <span class=pre>in</span> <span class=pre>dict</span></tt>, no <tt class="docutils literal"><span class=pre>dict.has_key()</span></tt>:</p>
+<pre class="incremental literal-block"># haz esto:
+if clave in d:
+    ...hacer algo con d[clave]
+
+# no esto:
+if d.has_key(clave):
+    ...hacer algo con d[clave]
+</pre>
+<div class="handout container">
+En este ejemplo <tt class="docutils literal"><span class=pre>in</span></tt> es un operador.</div>
+</div>
+<div class=section id=dictionary-get-method>
+<h1>El método <tt class="docutils literal"><span class=pre>get</span></tt> de los diccionarios</h1>
+<p>A menudo tenemos que inicializar las entradas de un diccionario antes de utilizarlo:</p>
+<div class="handout container">
+Esta es la forma naïf de hacerlo:</div>
+<pre class=literal-block>navs = {}
+for (portfolio, acciones, posicion) in datos:
+    if portfolio not in navs:
+        navs[portfolio] = 0
+    navs[portfolio] += posicion * precios[acciones]
+</pre>
+<p class=incremental><tt class="docutils literal"><span class=pre>dict.get(clave,</span> <span class=pre>por_defecto)</span></tt> nos ahorra tener que comprobar si existe la clave:</p>
+<pre class="incremental literal-block">navs = {}
+for (portfolio, acciones, posicion) in data:
+    navs[portfolio] = (navs.get(portfolio, 0)
+                       + position * precios[acciones])
+</pre>
+<div class="handout container">
+Mucho más sencillo.</div>
+</div>
+<div class=section id=dictionary-setdefault-method-1>
+<h1>El método <tt class="docutils literal"><span class=pre>setdefault</span></tt> de los diccionarios (1)</h1>
+<div class="handout container">
+Ahora vamos a inicializar valores mutables para un diccionario. Cada valor del diccionario será una lista. Esta es la forma naïf:</div>
+<p>Inicializando valores mutables:</p>
+<pre class=literal-block>acciones = {}
+for (portfolio, accion) in datos:
+    if portfolio in acciones:
+        acciones[portfolio].append(accion)
+    else:
+        acciones[portfolio] = [accion]
+</pre>
+<p class=incremental>El método <tt class="docutils literal"><span class=pre>dict.setdefault(clave,</span> <span class=pre>por_defecto)</span></tt> es mucho más eficiente:</p>
+<pre class="incremental literal-block">acciones = {}
+for (portfolio, accion) in datos:
+    acciones.setdefault(portfolio, []).append(
+                                         accion)
+</pre>
+<div class="handout container">
+<p><tt class="docutils literal"><span class=pre>dict.setdefault()</span></tt> es equivalente a "devuelve el valor, o asigna el valor y devuélvelo". O 
+"asigna si es necesario, después devuelve". Es especialmente útil si la clave de tu diccionario es costosa de calcular o larga de escribir.</p>
+<p>El único problema con <tt class="docutils literal"><span class=pre>dict.setdefault()</span></tt> es que el valor por defecto siempre se evalúa, se necesite o no. Esto sólo importa si el valor es costoso de calcular.</p>
+<p>Si el valor por defecto <strong>es</strong> costoso de calcular, puede que prefieras usar la clase <tt class="docutils literal"><span class=pre>defaultdict</span></tt>, que veremos en breve.</p>
+</div>
+</div>
+<div class=section id=dictionary-setdefault-method-2>
+<h1>El método <tt class="docutils literal"><span class=pre>setdefault</span></tt> de los diccionarios (2)</h1>
+<div class="handout container">
+Aquí vemos que el método <tt class="docutils literal"><span class=pre>setdefault</span></tt> de los diccionarios también se puede utilizar como una sentencia independiente:</div>
+<pre class=literal-block>navs = {}
+for (portfolio, accion, posicion) in datos:
+    navs.setdefault(portfolio, 0)
+    navs[portfolio] += posicion * precios[accion]
+</pre>
+<div class="handout container">
+El método <tt class="docutils literal"><span class=pre>setdefault</span></tt> del diccionario devuelve el valor por defecto, pero nosotros lo ignoramos. Lo que estamos haciendo es aprovechar un efecto secundario de <tt class="docutils literal"><span class=pre>setdefault</span></tt>, que es el de asignar el valor del diccionario sólo si no existe ya un valor para esa clave.</div>
+</div>
+<div class=section id=defaultdict>
+<h1><tt class="docutils literal"><span class=pre>defaultdict</span></tt></h1>
+<p>Nuevo en Python 2.5.</p>
+<div class="handout container">
+<p><tt class="docutils literal"><span class=pre>defaultdict</span></tt> es una novedad de Python 2.5, parte del módulo <tt class="docutils literal"><span class=pre>collections</span></tt>. <tt class="docutils literal"><span class=pre>defaultdict</span></tt> es idéntico a los diccionarios normales,
+a excepción de un par de cosas:</p>
+<ul class=simple>
+<li>toma un parámetro extra como primer argumento: una función de factoría por defecto; y</li>
+<li>cuando se accede a una clave del diccionario por primera vez, se llama a la función de factoría por defecto y el resultado se utiliza para inicializar el valor del diccionario para esa clave.</li>
+</ul>
+<p>Hay dos formas de obtener <tt class="docutils literal"><span class=pre>defaultdict</span></tt>:</p>
+<ul>
+<li><p class=first>importar el módulo <tt class="docutils literal"><span class=pre>collections</span></tt> y referenciarlo a partir del módulo,</p>
+<div class="spoken container">
+<p>➔</p>
+</div>
+</li>
+<li><p class=first>o importar <tt class="docutils literal"><span class=pre>defaultdict</span></tt> directamente:</p>
+<div class="spoken container">
+<p>➔</p>
+</div>
+</li>
+</ul>
+</div>
+<pre class="incremental literal-block">import collections
+d = collections.defaultdict(...)
+</pre>
+<pre class="incremental literal-block">from collections import defaultdict
+d = defaultdict(...)
+</pre>
+<div class="handout container">
+A continuación tenemos el ejemplo que vimos anteriormente, en el que cada valor del diccionario debía inicializarse a una lista vacía, reescrito usando <tt class="docutils literal"><span class=pre>defaultdict</span></tt>:</div>
+<pre class="incremental literal-block">from collections import defaultdict
+
+acciones = defaultdict(list)
+for (portfolio, accion) in datos:
+    acciones[portfolio].append(accion)
+</pre>
+<div class="handout container">
+<p>Ya no hay ninguna complicación. En este caso, la función de factoría por defecto es <tt class="docutils literal"><span class=pre>list</span></tt>, la cual devuelve una lista vacía.</p>
+<p>Para obtener un diccionario con valores por defecto de 0 podríamos usar <tt class="docutils literal"><span class=pre>int</span></tt> como función de factoría por defecto:</p>
+</div>
+<pre class="incremental literal-block">navs = defaultdict(int)
+for (portfolio, accion, posicion) in datos:
+    navs[portfolio] += posicion * precios[accion]
+</pre>
+<div class="handout container">
+De todas formas deberías tener cuidado con <tt class="docutils literal"><span class=pre>defaultdict</span></tt>. Puedes encontrarte con excepciones de tipo <tt class="docutils literal"><span class=pre>KeyError</span></tt> al intentar acceder a claves de instancias de <tt class="docutils literal"><span class=pre>defaultdict</span></tt>. Es necesario usar un condicional "clave in dict" si necesitas comprobar la existencia de una clave en concreto.</div>
+</div>
+<div class=section id=building-splitting-dictionaries>
+<h1>Construyendo y dividiendo diccionarios</h1>
+<div class="handout container">
+Aquí tenéis una técnica útil para construir un diccionario a partir de dos listas (o secuencias): una lista de claves, y otra lista de valores.</div>
+<pre class="incremental literal-block">nombre = ['John', 'Eric', 'Terry', 'Michael']
+apellido = ['Cleese', 'Idle', 'Gilliam', 'Palin']
+</pre>
+<pre class="incremental literal-block">pythons = dict(zip(nombre, apellido))
+</pre>
+<pre class="incremental literal-block">&gt;&gt;&gt; pprint.pprint(pythons)
+{'John': 'Cleese',
+ 'Michael': 'Palin',
+ 'Eric': 'Idle',
+ 'Terry': 'Gilliam'}
+</pre>
+<div class="handout container">
+La inversa, por supuesto, es trivial:</div>
+<pre class="incremental literal-block">&gt;&gt;&gt; pythons.keys()
+['John', 'Michael', 'Eric', 'Terry']
+&gt;&gt;&gt; pythons.values()
+['Cleese', 'Palin', 'Idle', 'Gilliam']
+</pre>
+<div class="handout container">
+Observa que el orden del resultado de .keys() y .values() es distinto del de los elementos de las listas utilizadas para construir el diccionario.
+El orden de entrada es diferente del orden de salida. Esto es debido a que los diccionarios son colecciones no ordenadas. Por otro lado, el orden será siempre consistente (esto es, el orden de las claves se corresponderá con el de los valores), siempre y cuando el diccionario no se haya cambiado entre llamadas.</div>
+</div>
+<div class=section id=testing-for-truth-values>
+<h1>Comprobar si algo es cierto</h1>
+<pre class=literal-block># haz esto:       # no esto:
+if x:             if x == True:
+    pass              pass
+</pre>
+<div class="handout container">
+Es elegante y eficiente aprovechar los valores booleanos intrínsecos de los objetos Python.</div>
+<p class=incremental>Comprobar una lista:</p>
+<pre class="incremental literal-block"># haz esto:       # no esto:
+if items:         if len(items) != 0:
+    pass              pass
+
+                  # y menos esto:
+                  if items != []:
+                      pass
+</pre>
+</div>
+<div class=section id=truth-values>
+<h1>Valores booleanos</h1>
+<div class="handout container">
+Los nombres <tt class="docutils literal"><span class=pre>True</span></tt> y <tt class="docutils literal"><span class=pre>False</span></tt> son instancias del tipo <tt class="docutils literal"><span class=pre>bool</span></tt>, valores Booleanos. Como <tt class="docutils literal"><span class=pre>None</span></tt>, sólo hay una instancia de cada uno de ellos.</div>
+<table class=docutils border=1>
+<colgroup>
+<col width=46%>
+<col width=54%>
+</colgroup>
+<thead valign=bottom>
+<tr><th class=head>False</th>
+<th class=head>True</th>
+</tr>
+</thead>
+<tbody valign=top>
+<tr><td><tt class="docutils literal"><span class=pre>False</span></tt> (== 0)</td>
+<td><tt class="docutils literal"><span class=pre>True</span></tt> (== 1)</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class=pre>""</span></tt> (cadena vacía)</td>
+<td>cualquier cadena menos <tt class="docutils literal"><span class=pre>""</span></tt> (<tt class="docutils literal"><span class=pre>"</span> <span class=pre>"</span></tt>,
+<tt class="docutils literal"><span class=pre>"cualquiera"</span></tt>)</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class=pre>0</span></tt>, <tt class="docutils literal"><span class=pre>0.0</span></tt></td>
+<td>cualquier número menos <tt class="docutils literal"><span class=pre>0</span></tt> (1, 0.1, -1, 3.14)</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class=pre>[]</span></tt>, <tt class="docutils literal"><span class=pre>()</span></tt>, <tt class="docutils literal"><span class=pre>{}</span></tt>, <tt class="docutils literal"><span class=pre>set()</span></tt></td>
+<td>cualquier contenedor no vacío
+(<tt class="docutils literal"><span class=pre>[0]</span></tt>, <tt class="docutils literal"><span class=pre>(None,)</span></tt>, <tt class="docutils literal"><span class=pre>['']</span></tt>)</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class=pre>None</span></tt></td>
+<td>casi cualquier objeto que no sea explícitamente False</td>
+</tr>
+</tbody>
+</table>
+<div class="handout container">
+<p>Ejemplo del valor booleano de un objeto:</p>
+<pre class=doctest-block>&gt;&gt;&gt; class C:
+...  pass
+...
+&gt;&gt;&gt; o = C()
+&gt;&gt;&gt; bool(o)
+True
+&gt;&gt;&gt; bool(C)
+True
+</pre>
+<p>(Ejemplos: ejecuta <a class="reference external" href=http://python.net/%7Egoodger/projects/pycon/2007/idiomatic/truth.py>truth.py</a>.)</p>
+<p>Para controlar el valor booleano de instancias de una clase definida por el usuario, utiliza los métodos especiales <tt class="docutils literal"><span class=pre>__nonzero__</span></tt> o <tt class="docutils literal"><span class=pre>__len__</span></tt>. Usa <tt class="docutils literal"><span class=pre>__len__</span></tt> si tu clase es un contenedor para el que tiene sentido el tamaño:</p>
+<pre class=literal-block>class MiContenedor(object):
+
+    def __init__(self, data):
+        self.data = data
+
+    def __len__(self):
+        """Devuelve mi tamanyo."""
+        return len(self.data)
+</pre>
+<p>Si tu clase no es un contenedor, usa <tt class="docutils literal"><span class=pre>__nonzero__</span></tt>:</p>
+<pre class=literal-block>class MiClase(object):
+
+    def __init__(self, value):
+        self.value = value
+
+    def __nonzero__(self):
+        """Devuelve mi valor booleano (True o False)."""
+        # Esto puede ser tan complejo como queramos:
+        return bool(self.value)
+</pre>
+<p>En Python 3.0, <tt class="docutils literal"><span class=pre>__nonzero__</span></tt> se ha renombrado a <tt class="docutils literal"><span class=pre>__bool__</span></tt> por consistencia con el tipo <tt class="docutils literal"><span class=pre>bool</span></tt>. Para mejorar la compatibilidad, añade lo siguiente a la definición de la clase:</p>
+<pre class=literal-block>__bool__ = __nonzero__
+</pre>
+</div>
+</div>
+<div class=section id=index-item-1>
+<h1>Índices y elementos (1)</h1>
+<div class="handout container">
+Aquí tienes una buena forma de ahorrarte escribir demasiado si necesitas una lista de palabras:</div>
+<pre class=doctest-block>&gt;&gt;&gt; items = 'cero uno dos tres'.split()
+&gt;&gt;&gt; print items
+['cero', 'uno', 'dos', 'tres']
+</pre>
+<p class=incremental>Supongamos que quieres iterar sobre los elementos de la lista, y que necesitamos tanto el índice como el elemento en sí:</p>
+<pre class="incremental literal-block">                  - o -
+i = 0
+for item in items:      for i in range(len(items)):
+    print i, item               print i, items[i]
+    i += 1
+</pre>
+</div>
+<div class=section id=index-item-2-enumerate>
+<h1>Índices y elementos (2): <tt class="docutils literal"><span class=pre>enumerate</span></tt></h1>
+<p>La función <tt class="docutils literal"><span class=pre>enumerate</span></tt> toma como parámetro una lista y devuelve pares (indice, elemento):</p>
+<pre class=doctest-block>&gt;&gt;&gt; print list(enumerate(items))
+[(0, 'cero'), (1, 'uno'), (2, 'dos'), (3, 'tres')]
+</pre>
+<div class="handout container">
+Necesitamos usar un <tt class="docutils literal"><span class=pre>list</span></tt> para imprimir el resultado porque <tt class="docutils literal"><span class=pre>enumerate</span></tt> es una función lazy: genera los elementos uno a uno, un par cada vez, sólo cuando se requieren. Un bucle <tt class="docutils literal"><span class=pre>for</span></tt> es un lugar en el que se requiere un elemento cada vez. <tt class="docutils literal"><span class=pre>enumerate</span></tt> es un ejemplo de un <em>generador</em>, que trataremos más detenidamente más adelante. <tt class="docutils literal"><span class=pre>print</span></tt> no utiliza un elemento cada vez -- queremos el resultado completo, así que hay que convertir el generador explícitamente en una lista al imprimirlo.</div>
+<p class=incremental>De esta forma nuestro bucle es mucho más simple:</p>
+<pre class="incremental literal-block">for (indice, item) in enumerate(items):
+    print indice, item
+</pre>
+<pre class="incremental literal-block"># compara:               # compara:
+indice = 0               for i in range(len(items)):
+for item in items:           print i, items[i]
+    print indice, item
+    indice += 1
+</pre>
+<div class="handout container">
+<p>La versión con <tt class="docutils literal"><span class=pre>enumerate</span></tt> es más corta y simple que la versión de la izquierda, y también mucho más fácil de leer y entender.</p>
+<p>El siguiente ejemplo muestra cómo la función <tt class="docutils literal"><span class=pre>enumerate</span></tt> en realidad devuelve un iterador (un generador es algo parecido a un iterador):</p>
+<pre class=doctest-block>&gt;&gt;&gt; enumerate(items)
+&lt;enumerate object at 0x011EA1C0&gt;
+&gt;&gt;&gt; e = enumerate(items)
+&gt;&gt;&gt; e.next()
+(0, 'cero')
+&gt;&gt;&gt; e.next()
+(1, 'uno')
+&gt;&gt;&gt; e.next()
+(2, 'dos')
+&gt;&gt;&gt; e.next()
+(3, 'tres')
+&gt;&gt;&gt; e.next()
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in ?
+StopIteration
+</pre>
+</div>
+</div>
+<div class=section id=other-languages-have-variables>
+<h1>Otros lenguajes tienen "variables"</h1>
+<div class="handout container">
+En muchos otros lenguajes, al asignar un valor a una variable se coloca el valor en una especie de caja.</div>
+<table class="incremental borderless docutils" border=1>
+<colgroup>
+<col width=50%>
+<col width=50%>
+</colgroup>
+<tbody valign=top>
+<tr><td><pre class="first last literal-block">int a = 1;
+</pre>
+</td>
+<td><img alt=a1box.png class="incremental first last" src="data:image/png;base64,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">
+</td>
+</tr>
+</tbody>
+</table>
+<div class="handout container">
+<p>La caja "a" ahora contiene el entero 1.</p>
+<p>Al asignar otro valor a la misma variable lo que ocurre es que el valor que contiene la caja se sustituye por el nuevo:</p>
+</div>
+<table class="incremental borderless docutils" border=1>
+<colgroup>
+<col width=50%>
+<col width=50%>
+</colgroup>
+<tbody valign=top>
+<tr><td><pre class="first last literal-block">a = 2;
+</pre>
+</td>
+<td><img alt=a2box.png class="incremental first last" src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="99" height="121"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-2)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">
+</td>
+</tr>
+</tbody>
+</table>
+<div class="handout container">
+<p>Ahora "a" contiene el entero 2.</p>
+<p>Al asignar una variable a otra se realiza una copia del valor y se coloca en la nueva caja:</p>
+</div>
+<table class="incremental borderless docutils" border=1>
+<colgroup>
+<col width=33%>
+<col width=33%>
+<col width=33%>
+</colgroup>
+<tbody valign=top>
+<tr><td><pre class="first last literal-block">int b = a;
+</pre>
+</td>
+<td><img alt=b2box.png class="incremental first last" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAAB5CAIAAACiFAg/AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH1wITFRYuISD0pQAAGptJREFUeNrtXXlwHNWZ/153T8+tY0aHpdFlW6eRbwtj7NgYkxhsg0PIEiAOkMCaALu1CQnUZuNakiK7YQNVC1ukEnYrW1vrJJiEgJfg4AssfCFjxbIsS5YPHZY8h0bSaDxn9/Tx9o+e6ek5NTMaGdvJK5fU0/P0+vWvv+/3/b7vdbcRxhius+bz+fr7+x0Oh9vtZlmWYRiWZSmK0mg0arVar9eXlZXNnTu3urr6Ws4KXT9IYYw7Ozt7e3vtdnsoFJL3FxQUeDye+HkjVFJS0tTUtHr1ao1G8xeEVEdHR3d3t8PhiNufFCZlKyoqWrp06dq1a29+pHw+3549e86fP584k2lhku2rpaXlvvvuU6vVNy1SfX197e3t4+Pjcfs5jisqKvL7/ZkPVV5evm3bNoPBcBMidfDgwa6urkAg4HK5rFbrxMSEy+UKBAJ+v59hGIIgtFqtVqs1Go0VFRUmk6m6ujqV1RQWFnq93nnz5j388MMEQdxUSO3Zs+fUqVPd3d19fX0DAwNKCk/VzGbzsmXLWltbCwsL45zU5/OJoggAK1euvPvuu28epN5///0333yzr69veHg4278tKipqa2tbuXIlRVEAYDQa/X6/BBMA0DT92GOPVVZW3gxI7dy58+WXX+7r65vJIIsXL96wYYPFYlHCJLVFixbdf//9eZ82cY1hev3115977rkZwgQA3d3du3btGh0djYMJAPr7+xNDxA2G1Lvvvvviiy9OTEzkZTSbzbZ//36WZeP2h0KhCxcu3MBIdXR0PPPMM1evXk3VwWAwGI1GkiSzEhlHjx5NCmLe509dG5iCweC2bdvGxsaUOzUazYoVK2pra+vq6u688841a9aQJDk6OtrR0bF3794zZ8709vZOGxM7Ojrq6+tra2uVO+12+42K1JNPPjkwMKBU1YsXL37ttdfWrVsX17Ourq6uru6hhx4CgH379v3oRz/67LPPEslIqVG7u7vjkAoEAizL5leyXwvva29v3717t/zRYrF8+9vf7urqSoQprm3cuPHTTz/dsWOHXq9P062np2d0dDSOqrLS99cLUi+88EIgEJC26+vrH3/88R07dmT+5z/+8Y9fe+01o9GYxqzi3A1jPDU1dYMhdfz48dOnT8vWtHnz5kWLFmWrDJ988snt27en6RBXhCgoKOA47gZD6pVXXpEmXVhYuHXrVikjyWGcV199ddWqVam+HRoakrm/oKAgFArFMdf1jpTX621vbwcAkiQ3b95cVlZmMpnq6+tzG23Hjh2pNITb7fb5fBJMgUBASq1vJKR++ctfut1uiZ4aGxvVavWDDz6Y82ibNm1auHBh0q8wxl6v12g0BgIBnucLCgpuMOX58ccfAwBBEMuWLVOr1U888URpaelMBly+fHmqrxiGYRiG53kpbb7B9FR3d7ckkRYtWrR9+3aTyTTDAevq6lJ9RZKkzOI3mE3t3btXCt4rV67MC0ySwkp+GgRhNpvl7aamphvJpsxm89NPP221Wt944428wAQAy5YtKywsTEwei4uL5fJebW1tTU3NjYRUW1tbW1tbfsckSbKkpCQRqZKSErko3NDQMBunc63rUzNvSTmouLhY2igqKlqxYsVfkQIAcLlcaeCbP3++SqX6K1LgdDoTV08pipKISa/Xp5ERf1lI7dy5M7HI2dzcXFVVpdfrGxoaKioq/ooUAEBXV1fizoaGBr1eX1RUtHXr1tk79A2GlLIcKLWysrKlS5cihGYVphsMqYsXL549ezZuZ2NjI0VRq1atmmGe9DlnMzk0jHF/z/HuEweKzXNMZVXmMou51FJQVIIQ8dxzz0kFA6U4WLJkSU1Nze233z7bE7uOkOK50KmOvcf3/5r3ORmW53kBIwBEYABEUDxVJBVwlG3t2rVz586dpeX16xEpv9fd8cl7ne2/V4lBmkKUimBCYWpAGAMCJHIfHr0QZ1B1NXOWLF6o4qyHP/xvU2mluazKXFJpKrWoNbqbEKmJsdGjB3ad69ynIQU9iYBA0n6EIHwXAMIIIzcD5y7ErCnotPTGuzergoPBqZHzV0AEJGKQ/tG6guLSKnNZlbnUYiqtNJdYTGUWg7H4RkVq+NKZw/t+M3rhhEGFjDQCQLGBBgFgjJEE1pEzbl/sWsvKtuWWIpH0X8YIEQgIwIhACAEChARvwN7ns58bwiBgEEQQMCZUmuKSKlNppanUYi61mEstplJLYXFZ5rcQXWukRFHs7frk8L5fe8YG9DQqVCefqGRTCGEA5PbjcxdjDGpeTeW6VYso71mMAAADRggBYMAAgKSPiEIAIGEHCBGAOOwedE4N2foxLwIvYl7EGFGFpjmy25pLK01lVSZzBaWiP0+kQizTeeyDYwffEgOTOhUyqtNdTIQQBgAMAPjDEw6lQRl06o0b11PeXgwYSVAhABz2UwDACAOWcMIYIwjvC8OnImOOKwbsrkG78xLmxTCCAkYFRSWmUovktpILl1fMvRZ3BXmvTh4/9E7n4d2UENCqkNTS/0mA5b0+FhDqOM8cPNot76dV5NbNX1pYGSRwSAIUASAE0oDSBgIAyQ0RSP4IkQ25Z3qZImAQRNn0gBPwN5792eza1Jht6MiBXb0n92sp0UAipMqUFAiEMIBjSjx+6oLSJe9Yu6q1SgCOxQghBBhjkM4cY4QQluxQMkgpakq2BghwxPTCvprOnCkEFIHU4YoYUWQyYlGYLaQunes8cuCty+dP6igooBEChEFyFMmtppkugYAX8f7PrgQCwSiLL198+y3FwExgBICxREMSWlIAkMYMw4cBAcYIQTiGAsLyRzytZYULhwRatLDG42eFvCMlCPyZzo+O7N81ZR/QUGBUoXC8D59LhE0Q4LRgEQQ61O0bvRJdQ1/QXP+lLyzEvkuAolYCGEkQSJYjwyfbGsIgHSvskJEwMe2lkuawcGFNYaHO42dFIX9IMUH/ySPvH/vobdY7qSZBp4qEo+iVjkQoJLlIOrDOXA6d6rkof6ytrrz/7tXg7QcUhgUwQjJ5Rzg7dSgMTyBsehFY01+qha01RUV6AAAMYl5syu1yHPvonc6j7wMXoAmkIUFGRMkXciSSvSDVPP0M/uCTC9LKHQCUlxQ/sOVO5O0P+y+SSAcDRPgoIrsSQ6EMVmIoTGPXBEKtrdXFxdEbbLAozggp68j5I/t39Z76mMKCCgEiIhQqTzR8CjI04cie3gt+c/DK+MSktF1o1N235S4te0ECCRScjSHCR0g+KED0sii5PAoWKOBLeqkQQre0VpuKDbEyMCebwhifP/vp0QNvD104pQJRjQBJGhtHrTp2ojJfKBGMbMSC9Ydjkz3nLknbGrVq08b1JTAsG6OMr6y4ZM7OIhQqTS8WMISg9ZYqs8mQwL9ZIsXzXFfHvqMHd03ahykkakBKQiQakOILyODIYQhFrqqS3aVLHecFn/T4j3SEK1A0RWy8c3Wt3hm5OvEsI3N21qEw1tJlsBCCWxZUm83GZMaRsfcF/J6O9vc6Dv3B73GRIKhQhDojTBGeZXhOMbQNcd1AJqyYbj0j3J5PzgiiCAAUie68Y3VzqT8c4JKzTDSFjguFWBFrMwyFBEILWqpKSpLf0JBR7Jsctx49+PapY3/iQ0FCFCgEkmHHBrLIyQPGkpnhMFlEu0Hk21h2l7pZXfw7+3uCQSasML+wcnFVCIsYJWcZiKWn+FAYJicEosqMCY2KcwAWlfSEFcpFMtKWFktpaaq7GfA0PHV5oOfogbf7Th8BngMsEKAkh1jajvJDlLbjCCvGPZXdAPuC8OsPL065ww+orb5t2b1tBpvzaow9hlkGlFwuOU4YrIRQCOo5nKEZIxXPW7Sez1A8l0eN9JaWqrKywnSJfVKbwljsPX3kyP5dI4NnEc+DKEjJVBIaVnINxDJRhD5i1FQywuIE/D97R2yO8A3YbUtv+eqaEgK4BJYBmZ7kEaMskxAKRXU5b1gAiEQiQ7LWNKFwQYtlTnnRNCUQHIsUF2I6j//p2MHfTTqvYJ4HUVD6eYSGFd4uszXE0HYYmDC7xxMWjr2qvz00eWlwWJrAogX1D99VTQIbuWYgY6oUQYksE6cbsKZcMLYCIpDIAMZk0BrhtXgjXbCgsqKieLpYr7Apr8fVcejdjsO7/Z4pzHFYxFJlB5Ai8CboRkUgw0p2j3aDWJ2ZIEf/+OdAV3dveIGzvnbbPY0UDoTZlwhzdjIRlDwUhq+lbo5YEIGJ1KLAaDQIR68bIMAtC6oslRndhCOKAuW0Dx898HbXiX0hlhFDnDQ7JIsjUEaoeBpWSr7YQAZKWpX7x8nRjgF07NPwSue82spHtyxUg0/mwUj0QhkLbgAADwOnL7oWLvIUF2iB1AIWiaAtIkpjdMOCZku1JdN7lURRJNWB0+O2i0GfXwjx4VQJhQNVdEPejFR/IlWfmJ0x3RDIfyt3k4dFAP129N7+kwwbAoAaS9njW9sMlFfZ388IHCeEdY7iD2UFhxRDAwAi1Uhfte8z26cdn9mtI0tX3AYAEJoiA0NIMaw0kQXNltqakgxhuuoJIn0tRZKqWxfPQQhCIZ5huCATCgY5luUZJhRkOJblYmkYR/SdMpDFEhYkYfc4OXp5UvjD/rP+QBAAKsrND371PkpP+cGiBIIwCRpBVOyIIC8dg6RBFBBBIYIERCGCEhE1PHKl52wfADQ1hm9PRuy4UnZJ5tzSWFFXW5KV5BYFgSIpCmNMEIRardKoVUVFOtkUJHZiWZ5hOYaJ/GNDDMOHWA6SEVYSnZkgR8c94u/297uvegGg1Fz4wFe+Yii28Im1IRWkeipL5AKEKn6pCgt8+6FDPM8b9JoVt64GABAYHBiF2FS0uWnOvLll2Zf/BYqiaFHE0m3eWLlCgsMGr9GoNFoaKTIjyZCYEMcwHBuGj2NZjmG4UIhPL0evBvFbBy6NT0wBQHGR4f4v319Sbslu0slg4rjQO++8c3lkBADm11WrpXdNsJMIC1ixhNHcVFE/rzynhZKITcVfn7hFpYS4CQhpNbRWQyt8X9IdOMRyDMMzLMeyIZbhWZZjWI7jeMAowIlvfTRiszsBwGjQ3Lfl3srqupnD5PV63nv3ncGhEelj66Kl4egYtIMiK2xunNNYnwtMMlK0qEQqFiQsp7+JFYqIXEKKngRCWi2t1aplIpZIRsSYYfghm/dvvkg4xs2TbqaheUl5VX1IyGa6oQBB6yJGxLlck/293SMjl212Z5ANu29luamhaQEAAOfBzIRUIMUIGuvLmhtzv7VKFASKIikscgDTWNV0VpYKQLmESOh0dGu9ubXBrCBme4gTJt3BiSlmYio4PhWcnApOTAXGp4L+ACcCFgSsqIcQHBcKcaFQiA+FuBDHs6FEcoP58+eHpxF0RirouH5u2YKm3J92x4AxFilSRYs4lOakEwVrkgJYsr0pekbHxAC0iqwoNVSWxWfwAYazO732ca9j3Gdzeu3jXrvT65ryev3pHiHVqKm229YAABZC2HdFumB1tSUtTZU4dYk1E6gEQaBIkhJFnL3tZHHoacdMrNLqNKr5Nab5NfHK0B8IycDZx732CI6BIAcAdXVzCwoKAQBzfiwyAFBTbWpprACY6ZqmFPtU8YSe1H8yoKppgYm1p1wusV5HN9SZG+rMcfs9Psbu9CHaSGuvBljwM+eDOrrYZGhuqsAAGEeyxZnwFEmplDaVeF5ZMlRGJpj10NO1AoOmwCC9hcoHAFBZDQBsiAMctqcZGhXGIkFSKjHNgjtOujk9ZBl2n+2VfgkojGd0JAwgCgJBUSoca1M4A4rKcC/GmcIzW7dHhB1P+oVzhkoQBYIkqVQ2hXNCLOOhZv99MjjifHimRwtnM1ziKeeqP0WMWZa/6mWGre7B0anB0anvfnOVUa9WVI5z1Wk5eY0MFs4qWie6sJTNpGD07PTn6XP2H/77R0EmXg0+u+3W3KRDvnxP8rzwdo7HxBJP0dM4MM7I8Za0VPzHjk1b1jdlS1V4Vr0P54PUMYiiQJAUlfgqEJzFRVNkEjWm5751+5rlNbmFubyTOlbEvxkylSiKBBWXIacP9Rn0rLMUZczus0vqGKSAJ/vgDFSCZFNpLyaOO6dpD1dVUZhhtMTXSlNFfDB3oSAKAkGSqtSMnh1VSa16TmGObjJrGCl9MHeeolJo9By1EsZlJfrrRn9K/hfl9dygkr0vXqNnqz/jttB1oz/D8iDqeTlzFY4ghTM6MzwdqWceLfG1gitSSJgpJ0p6ihKnsfkZnhf+HBhKodGV9oVztU0RiwQ5rfLMltRzSpXxbIGFw26n8MGcYx+V6iV0uenPGYa5PJK6zEt4ZjYVyZBVdLoRsq9/Jm29F51vfXCm54JTEEVBwIDxyiXVWzc0LW+tRAhmLwWMy2MkvLLPk7EoJtTR06fKcWtWmbTOHtufPrnY3R//koP2E0PtJ4Ys5cbnn1yzotUyKxlzePEY5+51UT0lUhRFZzpG5ks1ivbTN48sair/zuOrquYUBBnu3MD4Hz8+Ly+xWMe8L/xs/0+/98WVi6vyjlX4zs+oQclCAWULePS+hGzAya7nhlXzfvj0WumBQ4RgbVvdN7+y9MMjl97YeSLECQAQ4oR/fHX/T7571+pIao1xps+1ZOR9UWGVe+wQRSmbyaDqkq3+lNvWLzYTRMxp0zT15btaXvrOBpIM7+d48Z9f/8jlDsyCSlCoz5kIBVEgKJUKizmUMjLVn5ZSY9KwtGpp9T8/u142HTYk7NzdnX+NoMxoIsWFHCgrbFOZAZ27/kxllOtvm7t6WbSYtfvgOeekP+9gKfCC3FjdG+CKzBUERWVQS8ipqJBJz4c2R9+lyPHibz84k19VFbfikANeNqd34Irv60+9RJAUlaeSSC76c3HznKa5JUrZNQulPMUqlizWM2u+QOj4qZGtj3yvoqqeICk6IzmVTf0zc7AxwPrb5sofR+2efHte7j7IC+Lhk8NLbtu8bNXdAEBQFJWx92Vd/8zEBCtKow8+ef2sx8fmNemLLU5ls/J+8swVg6nu3q/9g/SRICk6u1POiarSzLDcHPOImHXMk0+jii1OZb5Ic2FowunGj2x/iaRUEaRSZ8i5hrnsyKy8JAapQqMmX6SepDiV2cr7uMt/qs/xtSdeLDJF73YkEEIZ/dcJWerPzDElFa96UNPknFJDXm0qpjiVycp7kOWOdl7ecO+36lti3uFIAAAQVI5zyIDU0xUbMQaAiamohqqtLEL5S/5wnM6MWyhNrjDx0c6R2sZb77j7G3FfEQBAklTO7jVz/el0RZGqqyrOZ1UPx0gFeSkLUhfUu/rsAlH44Dd3JCaeBABQpCo3q86L/hyfjKZ7cauqM6QqHDsAVtzNkfQUhq1Tg1e8X3/qJY0uCQMQAEBQqmnnlLP+dHuZ9GN29dkihIU2rJo7G5W8xFW/xNNxe5gT3Ve2PvK9iurkL+MlAIDMMKHJTH+SJKG03O5zjjRg25ze9hPD0vaW9U2W8ny/rTs2MU618h7ihMMnh5fffq8kMlMilV3qN53+LDRqXt+xqWpO+Jx/9ftTl23uVGO9vadHqvnUVBY+9bUV+V1/T1qcSlx5xxh/2jVSVDZvS0RkprcpMY9UdUt92X/+5L4HNi5ACAIM951/+bD9xFCcUYoi/t/dp//vYD8AmAq1rzz/JaNBnYvcyJTUU668n73onPKhR7a/RFHp+BphjH/xb0+XG6Z0Wnra40Yf+Iv+AuUrnZDi4TsAOHt+7K09PZ09Nl4QG2rNX2iraZlXyrC8P8gdPD7QedYGAKuX1bzwt2tMhdrImLGDA+Rc/5yY8vGCSJEERRIURVAkQZKkvE2RBEEg25jnk5Mjj//9Kw0LpnlBOQUAlCpj70u6VJO0EwAAtDaV/2tTuTcQOtp5+VDH0O8/7JUq6AhBSbFu0x2N96ytX9xcAfm4VT0VR8X6YExy4wtwx7tG77r3W9PCFEYqs+WZ1JCkXtSSmlGvvmdd46Z1jQDA8YLXFyo0alTyW7tm81b1pMUp6VR5Xjx8cnhe88o77vlGJkNRAEBRNPC5QJTyc+qmUpHmYm0m3fNlWrLWjEtu/nzWRtCmpCIzDaNTV8Y81jGP28NwnJAXUp9277W7VSjsg1i58j4wMmkbD6YSmSlt6rZ191/orXRYB4dtgx63g1aRep1Kr6X1OlqvVem0KvmllxmvjM7w+aP82BNOUSCenAqeOT/2wKM/SCUyU8a+mEza73FYB8dsQw7rgMM2OGYdYhm/VqOKYKcyaGmNhkKIkBfJUWyEivktd0gdH5UfUGxknWH4c7p8giASCJGKeCcI4rFTI4tXbv7y17+f1WjTv6XS7XKMWYcc1kGHbWDMOjg+NopFXq9V6XW0QUdLP2kVKZ9NKqQUmMaffhxSoHyGfcZIIQRhoUASiERdZ+16U9327/88vXrKBam4Jgj8xNjomG3QYR10WAfHrANu1xhFIYNObdDRep3KoKMNOpqUlj2TIRX3AoU0SMlmlRtS4y4vL2AAkDXUwIhr0gN/98NfKUt0s4VUYmOZgNM+FAFucMw26Pdd1Woog05t0NMGHW3U0TqtCslLySgOwKRQ5kF/Ol1eQUaKJCbcgfODrkxE5mwhldi8HteYddBhHZAoz2kbEoSQXksb9bRBRxsM6gI9raZVSf0rj1TlnPQKIpaqFGyIP9Pv3LDlifWbHs3tpK7F23QxFl3jNod10GEdGLMNOayDrvErJAEGvdqop42RnxRF5peqZKQwxr0Xx2sb2x595uWcc6PP5/9t57mQ0z4ciRJDY7ZBj3tCq6GMerVRrzYa1EY9bdCqCQLNhKokpDDGAyNTBG169p/+S6vL/X+r+3yQSlLn93sc1kGHbXAs/HOIYwN6HV1gUBv10k91Jjm8so1NekUR28a8zin26Rd+kZV6un6RSqpOHNbBMetQWJ04RggkGvXqAoPaaFAX6NVGg1pFkemRmroavDjs+upjP1i26p4Zzuf6RSoTdaKhSaNBLVlcgUFt0KmV92qN2t09F8aW335vtiLzxkZqWnXisA4EAx6DjjYa1AV6TYFBfX5o3GCa+9TzWYvMmw2padSJddDnnXrq+Z/nIDKTtv8HBq9trHZKyYUAAAAASUVORK5CYII=">
+</td>
+<td><img alt=a2box.png class="incremental first last" src='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="99" height="121"><rect fill-opacity="0"/></svg>' style="background-blend-mode:normal!important;background-clip:content-box!important;background-position:50% 50%!important;background-color:rgba(0,0,0,0)!important;background-image:var(--sf-img-2)!important;background-size:100% 100%!important;background-origin:content-box!important;background-repeat:no-repeat!important">
+</td>
+</tr>
+</tbody>
+</table>
+<div class="handout container">
+"b" es una segunda caja, con una copia del entero 2. La caja "a" tiene una copia totalmente independiente.</div>
+</div>
+<div class=section id=python-has-names>
+<h1>Python tiene "nombres"</h1>
+<div class="handout container">
+En Python, un "nombre" o "identificador" es algo parecido a una etiqueta de un paquete de correos adjuntada a un objeto.</div>
+<table class="incremental borderless docutils" border=1>
+<colgroup>
+<col width=50%>
+<col width=50%>
+</colgroup>
+<tbody valign=top>
+<tr><td><pre class="first last literal-block">a = 1
+</pre>
+</td>
+<td><img alt=a1tag.png class="incremental first last" src="data:image/png;base64,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">
+</td>
+</tr>
+</tbody>
+</table>
+<div class="handout container">
+<p>En este caso, el objeto entero 1 tiene una etiqueta con texto "a".</p>
+<p>Si reasignarmos "a", lo que hacemos es colocar la etiqueta a otro objeto:</p>
+</div>
+<table class="incremental borderless docutils" border=1>
+<colgroup>
+<col width=33%>
+<col width=33%>
+<col width=33%>
+</colgroup>
+<tbody valign=top>
+<tr><td><pre class="first last literal-block">a = 2
+</pre>
+</td>
+<td><img alt=a2tag.png class="incremental first last" src="data:image/png;base64,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">
+</td>
+<td><img alt=1.png class="incremental first last" src=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAABFCAIAAACtytMwAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH1wITFRcqP1YB/QAAA7BJREFUWMPtmT1P6lAYx08rYBFstAkOigtqXNTJT+Fq4uxgdDQ6+BkcTNTBxLfJqF/CRCNvGtpirAmIBLEFJeALFThtLdLeoYarXKlcqU79T+05T8+vz8tpk+cA1QjxPL+9vc0wjL6ZBTQnRVH8fj9N06VSCUEQfeOmYFdXV16vt1AoCIJQqVS+tP8mLJ/PHx4eRiIRh8MhCMLr62sjT1m+ETev10vTdLFYtNvtjZP+GxaNRn0+393dXaFQoCiqq6traGio8ccbhaVSqUAgEI/HZVk+Pz8PhULZbHZ8fPy/3vVrGITw4OAgkUgUi8Wbm5tQKBSNRr+XaT1YpVLx+/3hcFhV1XQ6TZIkSZKyLH+7euvCKIoiSTKXy9ntdq/XGwwG8/l8k5vyE9jl5eXJyQnLsgiCJBKJ4+NjjuOAEfoASyaTgUAgmUxWKpXHx0efz3dxcaEoCjBIf2Esy+7v75fLZQjh6ekpTdOiKAJD9QbjOG53d1cUxUAgcHZ29vz8DH5AFgBAOp3e2dkJBoM0TedyOW2ip6dncHCwv78/Ho8fHR0ZA7u9vV1YWPD7/alUCgCAoujo6OjExMTc3ByKopoRQRDNlyIAwDI2NsYwjHYzPDw8Pz8/OTlZY+RwOAyBob29vQAAj8eztLTEMMy/JABAe3u7MWFcXl7u6+tbWVnR+fXZ7XZjYAMDA6urq/pGRsFQ8IsyYSbMhJkwE2bCTJgJM2EmzISZMBP28zAMw15eXn4DhmFYS0vLb3imkSCEP+5Za2urxWKBEAIAJEkyAFavV6YoitVqLZVK2q0xnum0nKskAMCXjbWGYPVWqfE4nU7rd/cbggmC8Ol4Tdyenp4oimoWpuX/X5XL5ZoRhmGur6/rrWP5dGlFUUqlEs/zoihCCN8nRie8OI5ns9m9vT232+3xeNra2jAMw3G8s7PTarUqilILW1tbgxDKslwtioeHh3o5e1/rOI5XTy9YlmVZtjrldDplWbbZbB/CuLGxcX9/L0nS+/KjKKpe6cdiMZ7nAQA6JzLalObZX9jm5mYmk0EQ5P3SgiBEIhGdXJIkqV3U2x5aUiCEBEG8hXFra0sjqaqqjaiqGovFwuFwsVjUqZ1IJOJyuUZGRqpt10/ldrunpqYQVVUXFxdTqRTP8xBCSZJkWRYEgeO4TCbT4EfL5XJ5PB6Hw4FhGIZhHR0dWj8Ux3EURbu7u6enp982Jo7jP/QDm52dXV9f/3AMabPZnE6n4SRFUQiCmJmZqY78AcYFhCaBG8VHAAAAAElFTkSuQmCC>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="handout container">
+<p>Ahora el nombre "a" está asignado al objeto entero 2.</p>
+<p>El objeto entero original 1 ya no tiene la etiqueta "a". Puede que siga existiendo, pero ya no podemos accederlo a través del nombre "a". (Cuando un objeto no tiene más referencias o etiquetas asociadas, se elimina de memoria.)</p>
+<p>Si asignamos un nombre a otro, lo único que hacemos es adjuntar otra etiqueta de nombre a un objeto existente:</p>
+</div>
+<table class="incremental borderless docutils" border=1>
+<colgroup>
+<col width=50%>
+<col width=50%>
+</colgroup>
+<tbody valign=top>
+<tr><td><pre class="first last literal-block">b = a
+</pre>
+</td>
+<td><img alt=ab2tag.png class="incremental first last" src="data:image/png;base64,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">
+</td>
+</tr>
+</tbody>
+</table>
+<div class="handout container">
+El nombre "b" es sólo una segunda etiqueta añadida al mismo objeto que "a".</div>
+<div class="handout container">
+<p>Aunque en Python normalmente también usamos el término "variables" (porque es terminología común), en realidad nos estamos refiriendo a "nombres" o "identificadores".
+En Python, las "variables" son etiquetas con nombres para los valores, no cajas con nombres.</p>
+<p>Aunque no aprendas nada más de este tutorial, espero que al menos hayas entendido cómo funcionan los nombres en Python. Entender este punto te dará buenos dividendos, ayudándote a evitar casos como este:</p>
+<div class="spoken container">
+➔</div>
+</div>
+</div>
+<div class=section id=default-parameter-values>
+<h1>Valores por defecto para los parámetros</h1>
+<div class="handout container">
+Este es un fallo muy común entre los novatos. Incluso programadores más experimentados pueden cometer el mismo fallo si no entienden los nombres en Python.</div>
+<pre class=literal-block>def anyadir_erroneo(nuevo_item, una_lista=[]):
+    una_lista.append(nuevo_item)
+    return una_lista
+</pre>
+<div class="handout container">
+El problema con esto es que el valor por defecto de <tt class="docutils literal"><span class=pre>una_lista</span></tt>, una lista vacía, se evalúa en el momento de definir la función. De modo que cada vez que llamas a la función, obtienes <strong>el mismo</strong> valor por defecto. Prueba la función varias veces:</div>
+<pre class="incremental literal-block">&gt;&gt;&gt; print anyadir_erroneo('uno')
+['uno']
+</pre>
+<pre class="incremental literal-block">&gt;&gt;&gt; print anyadir_erroneo('dos')
+['uno', 'dos']
+</pre>
+<div class="handout container">
+Las listas son objetos mutables; puedes modificar su contenido. La forma correcta de obtener una lista por defecto (o diccionario, o conjunto) es crearla en tiempo de ejecución, <strong>dentro de la función</strong>:</div>
+<pre class="incremental literal-block">def anyadir_correcto(nuevo_item, una_lista=None):
+    if una_lista is None:
+        una_lista = []
+    una_lista.append(nuevo_item)
+    return una_lista
+</pre>
+</div>
+<div class=section id=string-formatting>
+<h1>% Formateo de cadenas</h1>
+<div class="handout container">
+El operador <tt class="docutils literal"><span class=pre>%</span></tt> de Python funciona de forma similar al de la función <tt class="docutils literal"><span class=pre>sprintf</span></tt> de C.</div>
+<div class="handout container">
+<p>Aunque si no sabes C, este dato no te será de mucha utilidad. Basicamente,
+puedes establecer una plantilla o formato para los valores.</p>
+<p>En este ejemplo, la plantilla contiene dos especificaciones de conversión: "%s" significa "inserta una cadena aquí", y "%i" significa "convierte un entero en una cadena e insértalo aquí". "%s" es particularmente útil porque utiliza la función <tt class="docutils literal"><span class=pre>str()</span></tt> de Python para convertir cualquier objeto en una cadena.</p>
+<p>Los valores interpolados deben ajustarse a la plantilla; en este caso tenemos dos valores, una tupla.</p>
+</div>
+<pre class=literal-block>nombre = 'David'
+mensajes = 3
+texto = ('Hola %s, tienes %i mensajes'
+        % (nombre, mensajes))
+print texto
+</pre>
+<p class=incremental>Salida:</p>
+<pre class="incremental literal-block">Hola David, tienes 3 mensajes
+</pre>
+<div class="handout container">
+Puedes encontrar más detalles en la Referencia de Python, sección 2.3.6.2, "Operaciones de Formateo de Cadenas". ¡Añade a marcadores esta página!</div>
+<div class="handout container">
+Si aún no lo has hecho, ve a python.org, descarga la documentación en HTML (en un fichero .zip o un tarball), e instalala en tu máquina. No hay nada como tener la guía definitiva al alcance de la mano.</div>
+</div>
+<div class=section id=advanced-string-formatting>
+<h1>Formateo de cadenas avanzado</h1>
+<div class="handout container">
+De lo que la gente no se da cuenta es de que existen otras formas más flexibles de realizar el formateo de cadenas:</div>
+<p class=incremental>Por nombre, con un diccionario:</p>
+<pre class="incremental literal-block">valores = {'nombre': nombre, 'mensajes': mensajes}
+print ('Hola %(nombre)s, tienes %(mensajes)i '
+       'mensajes' % valores)
+</pre>
+<div class="handout container">
+<p>En este caso especificas los nombres de los valores a interpolar, los cuales se buscan en el diccionario que se pasa como argumento.</p>
+<p>¿Notas la redundancia? Los nombres "nombre" y "mensajes" ya están definidos en el espacio de nombres local. Podemos aprovecharnos de esto.</p>
+</div>
+<p class=incremental>Por nombre, usando el espacio de nombres local:</p>
+<pre class="incremental literal-block">print ('Hola %(nombre)s, tienes %(mensajes)i '
+       'mensajes' % locals())
+</pre>
+<div class="handout container">
+<p>La función <tt class="docutils literal"><span class=pre>locals()</span></tt> devuelve un diccionario con todos los nombres disponibles en el espacio de nombres local.</p>
+<p>Este es un mecanismo muy potente. Con esto, puedes hacer todo el formateo de cadenas que quieras sin tener que preocuparte de ajustar los valores a interpolar con la plantilla.</p>
+<p>Pero el poder puede ser peligroso. ("Un gran poder conlleva una gran responsabilidad.") Si utilizas <tt class="docutils literal"><span class=pre>locals()</span></tt> con una plantilla proporcionada de forma externa, expones tu espacio de nombres local completamente al llamador. Esto es algo a tener en cuenta.</p>
+</div>
+<div class="handout container">
+<p>Para examinar tu espacio de nombres local:</p>
+<pre class=doctest-block>&gt;&gt;&gt; from pprint import pprint
+&gt;&gt;&gt; pprint(locals())
+</pre>
+</div>
+<div class="handout container">
+<tt class="docutils literal"><span class=pre>pprint</span></tt> es un módulo muy útil. Si no lo conoces todavía, intenta jugar un poco con él. ¡Facilita muchísimo la depuración de las estructuras de datos!</div>
+</div>
+<div class=section id=id1>
+<h1>Formateo de cadenas avanzado</h1>
+<div class="handout container">
+El espacio de nombres de los atributos de un objeto es un simple diccionario, <tt class="docutils literal"><span class=pre>self.__dict__</span></tt>.</div>
+<p class=incremental>Por nombre, usando el espacio de nombres del objeto:</p>
+<pre class="incremental literal-block">print ("Encontrados %(num_errores)d errores"
+       % self.__dict__)
+</pre>
+<p class=incremental>Es equivalente a lo siguiente, pero más flexible:</p>
+<pre class="incremental literal-block">print ("Encontrados %d errores"
+       % self.num_errores)
+</pre>
+<div class="handout container">
+Nota: Los atributos de clase se encuentran en class.__dict__. Las búsquedas en los espacios de nombre en realidad son búsquedas encadenadas en los diccionarios.</div>
+</div>
+<div class=section id=list-comprehensions>
+<h1>Comprensión de listas</h1>
+<div class="handout container">
+La comprensión de listas ("listcomps" para abreviar) son atajos sintácticos para el siguiente patrón:</div>
+<p class=incremental>La forma tradicional, con un bucle <tt class="docutils literal"><span class=pre>for</span></tt> y sentencias <tt class="docutils literal"><span class=pre>if</span></tt>:</p>
+<pre class="incremental literal-block">nueva_lista = []
+for item in una_lista:
+    if condicion(item):
+        nueva_lista.append(fn(item))
+</pre>
+<p class=incremental>Usando comprensión de listas:</p>
+<pre class="incremental literal-block">nueva_lista = [fn(item) for item in una_lista
+               if condicion(item)]
+</pre>
+<div class="handout container">
+La compresión de listas es muy clara y concisa, hasta cierto punto. Puedes tener varios bucles <tt class="docutils literal"><span class=pre>for</span></tt> y varias condiciones <tt class="docutils literal"><span class=pre>if</span></tt>, pero a partir de dos o tres, o si las condiciones son algo complejas, te sugiero utilizar bucles <tt class="docutils literal"><span class=pre>for</span></tt> normales. Aplicando el Zen de Python, elige la forma más legible.</div>
+<div class="handout container">
+<p>Por ejemplo, una lista de los cuadrados de 0–9:</p>
+<pre class=doctest-block>&gt;&gt;&gt; [n ** 2 for n in range(10)]
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+</pre>
+<p>Una lista de los cuadrados de los números impares de 0–9:</p>
+<pre class=doctest-block>&gt;&gt;&gt; [n ** 2 for n in range(10) if n % 2]
+[1, 9, 25, 49, 81]
+</pre>
+</div>
+</div>
+<div class=section id=generator-expressions-1>
+<h1>Expresiones generadoras (1)</h1>
+<div class="handout container">
+Calculemos la suma de los cuadrados de los números hasta el 100:</div>
+<p class=incremental>Como un bucle:</p>
+<pre class="incremental literal-block">total = 0
+for num in range(1, 101):
+    total += num * num
+</pre>
+<div class="handout container">
+Podemos utilizar la función <tt class="docutils literal"><span class=pre>sum</span></tt> para facilitarnos el trabajo, construyendo la siguiente secuencia.</div>
+<p class=incremental>Como comprensión de listas:</p>
+<pre class="incremental literal-block">total = sum([num * num for num in range(1, 101)])
+</pre>
+<p class=incremental>Como expresión generadora:</p>
+<pre class="incremental literal-block">total = sum(num * num for num in xrange(1, 101))
+</pre>
+<div class="handout container">
+<p>Las expresiones generadoras ("genexps") son exactamente iguales a la compresión de listas, excepto que las listcomps son <em>greedy</em> (avariciosas), mientras que las expresiones generadoras son <em>lazy</em> (perezosas). Las listcomps construyen la lista resultado de una sola vez. Las expresiones generadoras calculan un valor cada vez, cuando se necesita. Esto es particularmente útil para secuencias largas donde la lista a calcular no es más que un paso intermedio y no el resultado final.</p>
+<p>En este caso, sólo estamos interesados en la suma total; no necesitamos la lista de cuadrados intermedia. Utilizamos <tt class="docutils literal"><span class=pre>xrange</span></tt> por la misma razón: genera los valores uno por uno.</p>
+</div>
+</div>
+<div class=section id=generator-expressions-2>
+<h1>Expresiones generadoras (2)</h1>
+<div class="handout container">
+Por ejemplo, si estuvieramos sumando los cuadrados de varios miles de millones de enteros, nos quedaríamos sin memoria si utilizáramos comprensión de listas, pero con las expresiones generadoras no tendríamos ningún problema. ¡Aunque llevaría mucho tiempo, claro!</div>
+<pre class="incremental literal-block">total = sum(num * num
+            for num in xrange(1, 1000000000))
+</pre>
+<div class="handout container">
+La diferencia en la sintaxis es que las listcomps utilizan corchetes, mientras que las expresiones generadoras no lo hacen. Las expresiones generadoras necesitan colocarse entre paréntesis a veces, así que deberías acostumbrarte a utilizarlos.</div>
+<div class="handout container">
+<p>Regla general:</p>
+<ul class=simple>
+<li>Utiliza comprensión de listas cuando la lista sea el resultado que nos interesa.</li>
+<li>Utiliza una expresión generadora cuando la lista no sea más que un paso intermedio.</li>
+</ul>
+</div>
+<div class="handout container">
+<p>Aquí tenéis un ejemplo que vi recientemente en el trabajo.</p>
+<div class="spoken container">
+➔</div>
+<p>Necesitábamos un diccionario que mapeara los números de los meses (tanto en forma de enteros como de cadenas) a códigos de meses para futuros contratos. Podría hacerse en una sola línea de código.</p>
+<div class="spoken container">
+➔</div>
+<p>Esto funciona de la siguiente forma:</p>
+<ul class=simple>
+<li>La función <tt class="docutils literal"><span class=pre>dict()</span></tt> toma una lista de pares clave/valor (tuplas de 2 elementos).</li>
+<li>Tenemos una lista de códigos para los meses (cada código es una única letra, y una cadena no es más que una lista de letras). Usamos enumerate sobre la lista para obtener tanto el mes como el índice.</li>
+<li>Los números de los meses comienzan con 1, pero en Python los índices comienzan en 0, así que el número de mes es el índice más uno.</li>
+<li>Queremos buscar los meses tanto por cadenas como por enteros. Podemos usar las funciones <tt class="docutils literal"><span class=pre>int()</span></tt> y <tt class="docutils literal"><span class=pre>str()</span></tt> para hacerlo por nosotros, e iterar sobre ellos.</li>
+</ul>
+</div>
+<p class=incremental>Ejemplo reciente:</p>
+<pre class="incremental literal-block">codigos_meses = dict((fn(i+1), codigo)
+    for i, codigo in enumerate('FGHJKMNQUVXZ')
+    for fn in (int, str))
+</pre>
+<p class=incremental>Valores resultantes en <tt class="docutils literal"><span class=pre>codigos_meses</span></tt>:</p>
+<pre class="incremental literal-block">{ 1:  'F',  2:  'G',  3:  'H',  4:  'J', ...
+ '1': 'F', '2': 'G', '3': 'H', '4': 'J', ...}
+</pre>
+</div>
+<div class=section id=sorting>
+<h1>Ordenando</h1>
+<div class="handout container">
+Ordenar listas en Python es muy sencillo:</div>
+<pre class=literal-block>a_list.sort()
+</pre>
+<div class="handout container">
+<p>(Ten en cuenta que se ordena la lista original, el método <tt class="docutils literal"><span class=pre>sort</span></tt> <strong>no</strong> devuelve una lista o una copia de la lista ordenada.)</p>
+<p>Pero, ¿qué ocurre si tenemos una lista de datos a ordenar, pero el orden no es el normal (es decir, ordenar por la primera columna, después la segunda, etc.)? Puede que necesitemos ordenar por la segunda columna y luego por la cuarta.</p>
+</div>
+<p class=incremental>Podemos usar el método <tt class="docutils literal"><span class=pre>sort</span></tt> indicando una función propia para comparar:</p>
+<pre class="incremental literal-block">def mi_comparador(item1, item2):
+    returm cmp((item1[1], item1[3]),
+               (item2[1], item2[3]))
+
+una_lista.sort(mi_comparador)
+</pre>
+<div class="handout container">
+Esto funcionaría, pero sería muy lento para listas largas.</div>
+</div>
+<div class=section id=sorting-with-dsu>
+<h1>Ordenando con DSU *</h1>
+<p>DSU = Decorate-Sort-Undecorate (Decorar-Ordenar-Desdecorar)</p>
+<p>* Nota: Normalmente no es necesario utilizar DSU. Consulta la siguiente sección, <a class="reference internal" href=#sorting-with-keys>Ordenando con claves</a> para descubrir un nuevo enfoque.</p>
+<div class="handout container">
+En lugar de crear nuestras propias funciones para comparar, creamos una lista auxiliar que se ordene de forma natural:</div>
+<pre class="incremental literal-block"># Decorar:
+a_ordenar = [(item[1], item[3], item)
+              for item in una_lista]
+
+# Ordenar:
+a_ordenar.sort()
+
+# Desdecorar:
+una_lista = [item[-1] for item in a_ordenar]
+</pre>
+<div class="handout container">
+<p>La primera línea crea una lista que contiene tuplas: copias de elementos a ordenar en orden de prioridad, seguidos de los datos completos.</p>
+<p>La segunda línea utiliza la ordenación nativa de Python, que es muy rápida y eficiente.</p>
+<p>La tercera línea obtiene el <strong>último</strong> valor de la lista ordenada.
+Recuerda, este último valor son los datos completos. Descartamos los elementos que usamos para ordenar, que ya no necesitamos más.</p>
+</div>
+<div class="handout container">
+Se trata entonces de un compromiso entre espacio y complejidad frente a tiempo. Es más sencillo y rápido, pero necesitamos duplicar la lista original.</div>
+</div>
+<div class=section id=sorting-with-keys>
+<h1>Ordenando con claves</h1>
+<div class="handout container">
+En Python 2.4 se introdujo un parámetro opcional para el método <tt class="docutils literal"><span class=pre>sort</span></tt> de las listas, "key" (clave), para indicar una función que toma un solo parámetro y que se utiliza para calcular una clave que utilizar para comparar los elementos de la lista. Por ejemplo:</div>
+<pre class="incremental literal-block">def mi_clave(item):
+    return (item[1], item[3])
+
+a_ordenar.sort(key=mi_clave)
+</pre>
+<p class=incremental>La función <tt class="docutils literal"><span class=pre>mi_clave</span></tt> se llama una vez para cada elemento de la lista <tt class="docutils literal"><span class=pre>a_ordenar</span></tt>.</p>
+<p class=incremental>Puedes crear tus propias funciones para calcular la clave, o utilizar cualquier función de un sólo parámetro que se ajuste a tus necesidades:</p>
+<ul class="incremental simple">
+<li><tt class="docutils literal"><span class=pre>str.lower</span></tt> para ordenar alfabéticamente sin diferenciar mayúsculas y minúsculas.</li>
+<li><tt class="docutils literal"><span class=pre>len</span></tt> para ordenar basándose en el tamaño de los elementos (cadenas o contenedores).</li>
+<li><tt class="docutils literal"><span class=pre>int</span></tt> o <tt class="docutils literal"><span class=pre>float</span></tt> para ordenar de forma numérica, con cadenas que representan números como "2", "123", "35".</li>
+</ul>
+</div>
+<div class=section id=generators>
+<h1>Generadores</h1>
+<div class="handout container">
+Ya hemos visto las expresiones generadoras. Podemos crear expresiones generadoras tan complejas como queramos, como funciones:</div>
+<pre class=literal-block>def mi_generador_range(parada):
+    valor = 0
+    while valor &lt; parada:
+        yield valor
+        valor += 1
+
+for i in mi_generador_range(10):
+    haz_algo(i)
+</pre>
+<div class="handout container">
+<p>La palabra clave <tt class="docutils literal"><span class=pre>yield</span></tt> convierte una función en un generador. Cuando llamas a una función generadora, en lugar de devolver el valor de retorno inmediatamente Python devuelve un objeto generador, que es un iterador; tiene un método <tt class="docutils literal"><span class=pre>next</span></tt>. Los bucles <tt class="docutils literal"><span class=pre>for</span></tt> simplemente llaman al método <tt class="docutils literal"><span class=pre>next</span></tt> del iterador, hasta que se lanza una excepción <tt class="docutils literal"><span class=pre>StopIteration</span></tt>. Puedes lanzar una excepción <tt class="docutils literal"><span class=pre>StopIteration</span></tt> de forma explícita, o bien de forma implícita al llegar al final del código del generador como en el ejemplo anterior.</p>
+<p>Los generadores pueden ayudar a simplificar el trabajo con secuencias/iteradores, porque no necesitamos construir listas concretas; solo calculan un valor cada vez. La función generadora mantiene el estado.</p>
+</div>
+<div class="handout container">
+<p>Esta es la forma en la que funciona un bucle <tt class="docutils literal"><span class=pre>for</span></tt> en realidad. Python comprueba la secuencia que se pasa después de la palabra clave <tt class="docutils literal"><span class=pre>in</span></tt>. Si es un contenedor simple (como una lista, una tupla, un diccionario, un conjunto, o un contenedor creado por el usuario) Python lo convierte en un iterador. Si ya es un iterador no hace nada.</p>
+<p>Entonces Python llama repetidamente al método <tt class="docutils literal"><span class=pre>next</span></tt> del iterador, asigna el valor devuelto al contador del bucle (<tt class="docutils literal"><span class=pre>i</span></tt> en este caso), y ejecuta el código indentado. El proceso se repite una y otra vez, hasta que se lanza la excepción <tt class="docutils literal"><span class=pre>StopIteration</span></tt>, o se ejecuta una sentencia <tt class="docutils literal"><span class=pre>break</span></tt>.</p>
+<p>Un bucle <tt class="docutils literal"><span class=pre>for</span></tt> puede tener una clausula <tt class="docutils literal"><span class=pre>else</span></tt>, cuyo código se ejecuta después de que el iterador se quede sin elementos, pero <strong>no</strong> si se sale al ejecutar un <tt class="docutils literal"><span class=pre>break</span></tt>. Esta distinción permite usos muy elegantes. Las cláusulas <tt class="docutils literal"><span class=pre>else</span></tt> no se suelen utilizar mucho con los bucles <tt class="docutils literal"><span class=pre>for</span></tt>, pero pueden ser muy útiles. Algunas veces una cláusula <tt class="docutils literal"><span class=pre>else</span></tt> es la mejor forma de expresar la lógica que necesitas.</p>
+<p>Por ejemplo, si necesitas comprobar que una condición se cumple para todos los elementos de una secuencia:</p>
+<pre class=literal-block>for item in secuencia:
+    if condition(item):
+        break
+else:
+    raise Exception('La condicion no se satisface.')
+</pre>
+</div>
+</div>
+<div class=section id=example-generator>
+<h1>Generadores de ejemplo</h1>
+<p>Filtrar líneas en blanco de un archivo CSV (o elementos de una lista):</p>
+<pre class=literal-block>def filtrar_filas(iterador_filas):
+    for fila in iterador_filas:
+        if fila:
+            yield fila
+
+archivo_datos = open(ruta, 'rb')
+ifilas = filtrar_filas(csv.reader(archivo_datos))
+</pre>
+</div>
+<div class=section id=reading-lines-from-text-data-files>
+<h1>Leyendo líneas de un archivo de texto/datos</h1>
+<pre class=literal-block>archivodatos = open('archivodatos')
+for linea in archivodatos:
+    haz_algo(linea)
+</pre>
+<div class="handout container">
+<p>Esto es posible porque los archivos soportan el método <tt class="docutils literal"><span class=pre>next</span></tt>, como otros iteradores: listas, tuplas, diccionarios (para sus claves), generadores.</p>
+<p>Aunque hay que tener cuidado con una cosa: debido a la forma en la que funciona el buffer de datos, no puedes mezclar los métodos <tt class="docutils literal"><span class=pre>.next</span></tt> y <tt class="docutils literal"><span class=pre>.read*</span></tt> a menos que utilices Python 2.5+.</p>
+</div>
+</div>
+<div class=section id=eafp-vs-lbyl>
+<h1>EAFP contra LBYL</h1>
+<p class=incremental>EAFP = Easier to Ask Forgiveness than Permission (Es más sencillo pedir perdón que pedir permiso)</p>
+<p class=incremental>LBYL = Look Before You Leap (Piensa antes de actuar)</p>
+<div class="handout incremental container">
+Generalmente se considera mejor utilizar el enfoque EAFP, pero no siempre es así.</div>
+<ul class=incremental>
+<li><p class=first>Duck typing (tipado de pato)</p>
+<p>Si camina como un pato, habla como un pato, y tiene el aspecto de un pato: es un pato. <span class=incremental>(¿Un ganso? Suficientemente parecido.)</span></p>
+</li>
+<li><p class=first>Excepciones</p>
+<div class="handout container">
+<p>Si <tt class="docutils literal"><span class=pre>x</span></tt>
+debe ser una cadena para que el código funcione, por qué no escribir</p>
+</div>
+<pre class="incremental literal-block">str(x)
+</pre>
+<div class="handout container">
+<p>en lugar de intentar algo como</p>
+</div>
+<pre class="incremental literal-block">isinstance(x, str)
+</pre>
+</li>
+</ul>
+</div>
+<div class=section id=eafp-try-except-example>
+<h1>Ejemplo de <tt class="docutils literal"><span class=pre>try/except</span></tt> EAFP</h1>
+<div class="handout container">
+Puedes rodear el código que pueda lanzar alguna excepción en un bloque <tt class="docutils literal"><span class=pre>try/except</span></tt> para capturar los errores, y probablemente acabaras con una solución que será mucho más general que si hubieras intentado anticipar todas las posibilidades.</div>
+<pre class="incremental literal-block">try:
+    return str(x)
+except TypeError:
+    ...
+</pre>
+<div class="handout container">
+Nota: Especifica siempre las excepciones a capturar. Nunca uses cláusulas 
+<tt class="docutils literal"><span class=pre>except</span></tt> sin indicar el tipo de la excepción. Esto podría capturar excepciones no esperadas, haciendo que tu código fuera más dificil de depurar.</div>
+</div>
+<div class=section id=importing>
+<h1>Importando</h1>
+<blockquote>
+<pre class=literal-block>from modulo import *
+</pre>
+</blockquote>
+<div class="handout container">
+<p>Es probable que hayas visto esta forma con un "carácter comodín" de las sentencias import. Puede que incluso te guste. <strong>No lo utilices.</strong></p>
+<p>Parafraseando una diálogo muy conocido:</p>
+<blockquote>
+<p>(Dagobah, jungla, pantanos, y niebla.)</p>
+<p>LUKE: ¿Es mejor <tt class="docutils literal"><span class=pre>from</span> <span class=pre>module</span> <span class=pre>import</span> <span class=pre>*</span></tt> que los imports explícitos?</p>
+<p>YODA: No, no mejor. Más rápido, más fácil, más seductor.</p>
+<p>LUKE: Pero ¿cómo sabré por qué los imports explícitos son mejores que la forma con el carácter comodín?</p>
+<p>YODA: Saberlo tu podrás cuando tu código intentes leer seis meses después.</p>
+</blockquote>
+<p>Los carácteres comodín en los imports pertenecen al lado oscuro de la fuerza de Python.</p>
+</div>
+<p class=incremental><strong>¡Nunca!</strong></p>
+<div class="handout container">
+<p>El uso de <tt class="docutils literal"><span class=pre>from</span> <span class=pre>module</span> <span class=pre>import</span> <span class=pre>*</span></tt> conlleva polución del espacio de nombres. Tendrás montones de cosas en el espacio de nombres local que no esperabas tener. Puede que te encuentres con nombres importados sobreescribiendo nombres definidos en local. No podrás distinguir fácilmente de dónde vienen algunos nombres. Aunque pueda ser un atajo conveniente, no debería utilizarse en código en producción.</p>
+<p>Moraleja: <strong>¡no uses el carácter comodín para los imports!</strong></p>
+<div class="spoken container">
+➔</div>
+<p>Es mucho mejor:</p>
+<ul>
+<li><p class=first>referenciar nombres a través de su módulo (identificadores totalmente calificados),</p>
+<div class="spoken container">
+<p>➔</p>
+</div>
+</li>
+<li><p class=first>importar un módulo con un nombre largo usando un nombre más corto (alias; recomendado),</p>
+<div class="spoken container">
+<p>➔</p>
+</div>
+</li>
+<li><p class=first>o importar explicitamente sólo los nombres que necesitas.</p>
+<div class="spoken container">
+<p>➔</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="handout container">
+¡Alerta de polución del espacio de nombres!</div>
+<p class=incremental>En su lugar,</p>
+<div class="handout container">
+Referencia los nombres a través de su módulo (identificadores totalmente calificados):</div>
+<pre class="incremental literal-block">import modulo
+modulo.nombre
+</pre>
+<div class="handout container">
+O importa un módulo con un nombre largo usando un nombre más corto (alias):</div>
+<pre class="incremental literal-block">import modulo_con_nombre_largo as mod
+mod.nombre
+</pre>
+<div class="handout container">
+O importa explicitamente sólo los nombres que necesitas:</div>
+<pre class="incremental literal-block">from modulo import nombre
+nombre
+</pre>
+<div class="handout container">
+Aunque este método no se presta a usarse en el intérprete interactivo, donde puedes querer editar y recargar un módulo.</div>
+</div>
+<div class=section id=modules-scripts>
+<h1>Modulos y Scripts</h1>
+<p>Para crear un módulo que se pueda importar y también ejecutar como si de un script se tratara:</p>
+<pre class=literal-block>if __name__ == '__main__':
+    # codigo del script
+</pre>
+<div class="handout container">
+<p>Al importar un módulo su atributo <tt class="docutils literal"><span class=pre>__name__</span></tt> toma como valor el nombre del archivo que define el módulo, sin el ".py". De forma que el código de la sentencia <tt class="docutils literal"><span class=pre>if</span></tt> no se ejecutará al importarse el módulo. Cuando se ejecuta como un script el atributo <tt class="docutils literal"><span class=pre>__name__</span></tt> tiene como valor "__main__", por lo que, ahora sí, se ejecutará el código del script.</p>
+<p>A excepción de algunos pocos casos especiales, no deberías colocar ningún código ejecutable en el primer nivel del código. Colocalo en funciones, clases, métodos, y controla su ejecución usando <tt class="docutils literal"><span class=pre>if</span> <span class=pre>__name__</span> <span class=pre>==</span> <span class=pre>'__main__'</span></tt>.</p>
+</div>
+</div>
+<div class=section id=module-structure>
+<h1>Estructura de un módulo</h1>
+<pre class=literal-block>"""Cadena de documentacion del modulo"""
+
+# imports
+# constantes
+# clases de tipo excepcion
+# funciones para uso publico
+# clases
+# funciones y clases internas 
+
+def main(...):
+    ...
+
+if __name__ == '__main__':
+    estado = main()
+    sys.exit(estado)
+</pre>
+<div class="handout container">
+Esta es la forma en que deberían estructurarse los módulos.</div>
+</div>
+<div class=section id=command-line-processing>
+<h1>Procesar los argumentos de línea de comandos</h1>
+<p>Ejemplo: <a class="reference external" href=http://python.net/%7Egoodger/projects/pycon/2007/idiomatic/cmdline.py>cmdline.py</a>:</p>
+<div class="handout container">
+<pre class=literal-block>#!/usr/bin/env python
+
+"""
+Cadena de documentacion del modulo.
+"""
+
+import sys
+import optparse
+
+def procesar_linea_comandos(argv):
+    """
+    Devuelve una tupla de dos elementos: (objeto preferencias, lista args).
+    `argv` es una lista de argumentos, o `None` para ``sys.argv[1:]``.
+    """
+    if argv is None:
+        argv = sys.argv[1:]
+
+    # inicializamos el parser:
+    parser = optparse.OptionParser(
+        formatter=optparse.TitledHelpFormatter(width=78),
+        add_help_option=None)
+
+    # a continuacion definimos las opciones:
+    parser.add_option(      # descripcion personalizada; coloca --help al final
+        '-h', '--help', action='help',
+        help='Muestra este mensaje de ayuda y termina.')
+
+    prefs, args = parser.parse_args(argv)
+
+    # comprueba el numero de argumentos, verifica los valores, etc.:
+    if args:
+        parser.error('el programa no soporta ningun parametro de linea de comandos; '
+                     'se ignora "%s".' % (args,))
+
+    # cualquier otra cosa que haya que hacer con las preferencias y los argumentos
+
+    return prefs, args
+
+def main(argv=None):
+    prefs, args = procesar_linea_comandos(argv)
+    # aqui iria el codigo de la aplicacion, como:
+    # ejecutar(prefs, args)
+    return 0        # exito
+
+if __name__ == '__main__':
+    estado = main()
+    sys.exit(estado)
+
+</pre>
+</div>
+</div>
+<div class=section id=packages>
+<h1>Paquetes</h1>
+<pre class=literal-block>paquete/
+    __init__.py
+    modulo1.py
+    subpaquete/
+        __init__.py
+        modulo2.py
+</pre>
+<ul class="incremental simple">
+<li>Utilizados para organizar tu proyecto.</li>
+<li>Reduce el número de entradas en la ruta de carga.</li>
+<li>Reduce los conflictos de nombres al importar.</li>
+</ul>
+<p class=incremental>Ejemplo:</p>
+<pre class="incremental literal-block">import paquete.modulo1
+from paquetes.subpaquete import modulo2
+from paquetes.subpaquete.modulo2 import nombre
+</pre>
+<div class="handout container">
+<p>En Python 2.5 contamos con imports relativos y absolutos a través de future import:</p>
+<pre class=literal-block>from __future__ import absolute_import
+</pre>
+<p>No he utilizado esta característica demasiado, así que convenientemente cortaremos la explicación aquí.</p>
+</div>
+</div>
+<div class=section id=simple-is-better-than-complex>
+<h1>Simple es mejor que complejo</h1>
+<blockquote>
+<p>Depurar es el doble de complicado que programar. Por lo tanto, si escribes tu código tan inteligentemente como te sea posible, por definición, no serás lo suficientemente inteligente para depurarlo.</p>
+<p class=attribution>—Brian W. Kernighan, co-autor de <em>El Lenguaje de Programación C</em>
+y la "K" en "AWK"</p>
+</blockquote>
+<div class="handout container">
+En otras palabras, ¡haz que tus programas sean sencillos!</div>
+</div>
+<div class=section id=don-t-reinvent-the-wheel>
+<h1>No reinventes la rueda</h1>
+<div class="handout container">
+Antes de escribir cualquier código,</div>
+<div class="spoken container">
+➔ ➔ ➔ ➔</div>
+<ul class=incremental>
+<li><p class=first>Comprueba la librería estándar de Python.</p>
+</li>
+<li><p class=first>Comprueba el Índice de Paquetes de Python ("Cheese Shop"):</p>
+<blockquote>
+<p><a class="reference external" href=http://cheeseshop.python.org/pypi>http://cheeseshop.python.org/pypi</a></p>
+</blockquote>
+</li>
+<li><p class=first>Busca en internet. <span class=incremental>Google es tu amigo.</span></p>
+</li>
+</ul>
+</div>
+<div class=section id=references>
+<h1>Referencias</h1>
+<ul class="small simple">
+<li>"Python Objects", Fredrik Lundh,
+<a class="reference external" href=http://www.effbot.org/zone/python-objects.htm>http://www.effbot.org/zone/python-objects.htm</a></li>
+<li>"How to think like a Pythonista", Mark Hammond,
+<a class="reference external" href=http://python.net/crew/mwh/hacks/objectthink.html>http://python.net/crew/mwh/hacks/objectthink.html</a></li>
+<li>"Python main() functions", Guido van Rossum,
+<a class="reference external" href="http://www.artima.com/weblogs/viewpost.jsp?thread=4829">http://www.artima.com/weblogs/viewpost.jsp?thread=4829</a></li>
+<li>"Python Idioms and Efficiency",
+<a class="reference external" href=http://jaynes.colorado.edu/PythonIdioms.html>http://jaynes.colorado.edu/PythonIdioms.html</a></li>
+<li>"Python track: python idioms",
+<a class="reference external" href=http://www.cs.caltech.edu/courses/cs11/material/python/misc/python_idioms.html>http://www.cs.caltech.edu/courses/cs11/material/python/misc/python_idioms.html</a></li>
+<li>"Be Pythonic", Shalabh Chaturvedi,
+<a class="reference external" href=http://shalabh.infogami.com/Be_Pythonic2>http://shalabh.infogami.com/Be_Pythonic2</a></li>
+<li>"Python Is Not Java", Phillip J. Eby,
+<a class="reference external" href=http://dirtsimple.org/2004/12/python-is-not-java.html>http://dirtsimple.org/2004/12/python-is-not-java.html</a></li>
+<li>"What is Pythonic?", Martijn Faassen,
+<a class="reference external" href=http://faassen.n--tree.net/blog/view/weblog/2005/08/06/0>http://faassen.n--tree.net/blog/view/weblog/2005/08/06/0</a></li>
+<li>"Sorting Mini-HOWTO", Andrew Dalke,
+<a class="reference external" href=http://wiki.python.org/moin/HowTo/Sorting>http://wiki.python.org/moin/HowTo/Sorting</a></li>
+<li>"Python Idioms", <a class="reference external" href=http://www.gungfu.de/facts/wiki/Main/PythonIdioms>http://www.gungfu.de/facts/wiki/Main/PythonIdioms</a></li>
+<li>"Python FAQs", <a class="reference external" href=http://www.python.org/doc/faq/>http://www.python.org/doc/faq/</a></li>
+</ul>
+</div>
+</div>
+<div id=pie>
+<p class=centrado>
+</p>
+</div>
+</div>
+<noscript>
+<a href="http://s14.sitemeter.com/stats.asp?site=s14mundogeek" target="_top">
+<img src="http://s14.sitemeter.com/meter.asp?site=s14mundogeek" alt="Site Meter" border="0"></a>
+</noscript>
